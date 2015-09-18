@@ -33,7 +33,7 @@
 	        h5 {
 	          font-family: $times;
 	          font-size: 30px;
-	          color: rgb(0,1,41);
+	          color: $rsBlue;
 	          text-align: center;
 	        }
 
@@ -63,7 +63,7 @@
 					height: 80px;
 					padding-top:15px;
 					padding-right: 10px;
-					color: rgb(0,1,41);
+					color: $rsBlue;
 					letter-spacing: 2px;
 
 					&:hover, &:focus {

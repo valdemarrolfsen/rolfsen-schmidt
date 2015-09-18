@@ -9,3 +9,13 @@
 .cssFade.ng-hide {
     opacity: 0;
 }
+
+.copyright {
+	padding: 30px;
+	color: $rsBlue;
+
+	h6 {
+		font-size: 18px;
+		font-weight: 300;
+	}
+}
