@@ -1,0 +1,11 @@
+@import 'variables';
+
+.cssFade {
+    -webkit-transition: all 200ms; /* Safari */
+    transition: all 200ms;
+    opacity: 1;
+}
+
+.cssFade.ng-hide {
+    opacity: 0;
+}

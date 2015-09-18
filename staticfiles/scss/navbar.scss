@@ -1,21 +1,6 @@
+@import 'variables';
+
 #navbar {
-	/* Nav color */
-	$bgDefault      : #fff;
-	$bgHighlight    : #eee;
-	$colDefault     : #000;
-	$colHover       : #255676;
-
-	/* Small media screen */
-
-	$smallMediaSize : 768px;
-	$mediumMediaSize: 1250px;
-
-	/* Fonts */
-	$openSans : 'Open Sans Light', sans-serif;
-	$times: 'Times New Roman', serif;
-
-
-	/* --- Style --- */
 	.navbar {
 	  margin-bottom: 0;
 	}
@@ -76,7 +61,7 @@
 					line-height: 80px;
 
 					height: 80px;
-					padding-top:10px;
+					padding-top:15px;
 					padding-right: 10px;
 					color: rgb(0,1,41);
 					letter-spacing: 2px;
