@@ -1,0 +1,8 @@
+Django
+django-appconf
+django-compressor
+django-libsass
+libsass
+djangorestframework
+django-filter
+
