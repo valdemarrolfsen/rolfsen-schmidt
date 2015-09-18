@@ -43,7 +43,7 @@ INSTALLED_APPS = (
     'front',
     'compressor',
 
-    'rest_framework'
+    'rest_framework',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -70,7 +70,18 @@ DATABASES = {
     },
 }
 
-SESSION_ENGINE = 'mongoengine.django.sessions' # optional
+_MONGODB_USER = 'mongouser'
+_MONGODB_PASSWD = 'password'
+_MONGODB_HOST = 'thehost'
+_MONGODB_NAME = 'thedb'
+_MONGODB_DATABASE_HOST = \
+    'mongodb://%s:%s@%s/%s' \
+    % (_MONGODB_USER, _MONGODB_PASSWD, _MONGODB_HOST, _MONGODB_NAME)
+
+mongoengine.connect('test')
+
+
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
