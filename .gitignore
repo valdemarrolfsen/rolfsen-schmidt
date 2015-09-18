@@ -1,1 +1,14 @@
+.DS_store
+staticroot/
+media/
 venv/
+front/migrations/
+
+db.sqlite3
+
+# Pycharm and IDEA
+/.idea
+# Python
+*.pyc
+
+rolfsenAndSchmidt/etc/
