@@ -8,7 +8,7 @@
 			<meta charset="utf-8">
 			<meta name="viewport" content="width=device-width, initial-scale=1">
 
-			<title>{% block title %}Rolfsen & Schimdt{% endblock title %}</title>
+			<title>{% block title %}Korde{% endblock title %}</title>
 
 			<link rel="icon" type="image/png" href="{% static 'img/jobbr-logo/jobbr-logo-2.png' %}">
 
@@ -22,6 +22,7 @@
 			<link rel="icon" type="image/png" href="{% static 'img/icons/logo_black.png' %}" sizes="32x32">
 
 			<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+            <link href='https://fonts.googleapis.com/css?family=Raleway:400,300italic,300,200italic,200,100italic,100,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic' rel='stylesheet' type='text/css'>
 
 			<!-- Latest compiled and minified CSS -->
 			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
@@ -38,7 +39,7 @@
 	<body ng-app="main">
 
 		<div id = "navbar">
-			<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+			<nav nav-scroll class="navbar navbar-default navbar-fixed-top" role="navigation">
 				<!-- Brand and toggle get grouped for better mobile display -->
 				<div class="navbar-header page-scroll">
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-3">
@@ -47,16 +48,16 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand page-scroll" href="/"><h5>Rolfsen & Schmidt</h5></a>
+					<a class="navbar-brand page-scroll" href="#/"><img src="/static/img/logo/korde.png" alt=""></a>
 				</div>
 
 			  <!-- Collect the nav links, forms, and other content for toggling -->
 			  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-3">
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#/">Home</a></li>
-					<li><a href="#/">About</a></li>
-					<li><a href="#/">Careers</a></li>
-					<li><a href="#/">Contact</a></li>
+					<li><a href="#/">Hjem</a></li>
+					<li><a href="#/about">Om oss</a></li>
+					<li><a href="#/careers">Karriere</a></li>
+					<li><a href="#/">Kontakt</a></li>
 				</ul>
 			  </div><!-- /.navbar-collapse -->
 			</nav>
@@ -70,7 +71,7 @@
 					<div class="col-md-4">
 					</div>
 					<div class="col-md-4">
-						<span><h6>Copyright &copy; <strong>Rolfsen & Schmidt</strong> 2015</h6></span>
+						<span><h6>Copyright &copy; <strong>Korde</strong> 2016</h6></span>
 					</div>
 				</div>
 			</div>
@@ -92,6 +93,9 @@
 
     	<!-- CONTROLLERS -->
     	<script src="{% static 'js/angular/controllers/homeController.js' %}"></script>
+
+        <!-- DIRECTIVES -->
+        <script src="{% static 'js/angular/directives/navScroll.js' %}"></script>
 
 	</body>
 </html>
