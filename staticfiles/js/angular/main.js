@@ -23,6 +23,12 @@ main.config(function ($routeProvider) {
         controller: 'homeController',
         templateUrl: 'static/partials/home.html'
       })
+    .when('/about', {
+        templateUrl: 'static/partials/about.html'
+    })
+    .when('/careers', {
+        templateUrl: 'static/partials/careers.html'
+    })
       .otherwise({ redirectTo: '/' });
 });
 

@@ -6,8 +6,8 @@
 	}
 
 	.navbar-default {
-	    background: $bgDefault;
-	    border-color: $bgHighlight;
+		background: none;
+	    border: 0;
 	    border-radius: 0;
 	    height: 100px;
 	    -moz-transition: all 200ms ease;
@@ -21,6 +21,10 @@
 	    margin-left: auto;
 	    margin-right: auto;
 
+		box-shadow: none;
+
+		transition: 500ms;
+
 	    @media (max-width: $smallMediaSize) {
 	      width: 100%;
 	      height: auto;
@@ -31,11 +35,15 @@
 	        padding-top: 25px;
 
 	        h5 {
-	          font-family: $times;
-	          font-size: 30px;
-	          color: $rsBlue;
-	          text-align: center;
+				font-size: 30px;
+				font-weight: 100;
+				color: #fff;
+				text-align: center;
 	        }
+
+			img {
+				width: 180px;
+			}
 
 	        @media (max-width: $mediumMediaSize) {
 	          width: 100px;
@@ -43,7 +51,7 @@
 	          padding-top: 10px;
 
 	          img {
-	            width: 80px;
+	            width: 110px;
 	          }
 	          h5 {
 	            font-size: 15px;
@@ -54,21 +62,21 @@
 	    .navbar-nav {
 	        > li {
 	            > a {
-					font-family: $times;
 					font-size: 22px;
-					font-weight: 300;
+					font-weight: 100;
 
 					line-height: 80px;
 
 					height: 80px;
-					padding-top:15px;
+					padding-top:10px;
 					padding-right: 10px;
-					color: $rsBlue;
+					color: #fff;
 					letter-spacing: 2px;
 
+					text-shadow: none;
+
 					&:hover, &:focus {
-						color: $colHover;
-						font-weight: 400;
+						color: #d396d2;
 					}
 
 					@media (max-width: $smallMediaSize) {
@@ -135,9 +143,13 @@
 	            background: $bgHighlight;
 	        }
 	        .icon-bar {
-	            background: $colDefault;
+	            background: #fff;
 	        }
 	    }
+	}
+
+	.with-background {
+		background: #222;
 	}
 
 	@media (max-width: $smallMediaSize) {
