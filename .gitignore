@@ -4,6 +4,7 @@ media/
 venv/
 front/migrations/
 settings.py
+wsgi.py
 
 db.sqlite3
 
