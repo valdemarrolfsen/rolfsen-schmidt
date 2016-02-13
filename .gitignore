@@ -3,6 +3,7 @@ staticroot/
 media/
 venv/
 front/migrations/
+settings.py
 
 db.sqlite3
 
