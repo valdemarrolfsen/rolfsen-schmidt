@@ -1,0 +1,92 @@
+/* Nav color */
+/* Small media screen */
+/* Fonts */
+/* Colors */
+#home #section-intro {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  padding: 50px 100px;
+  color: #fff;
+  background-color: #3B2F63;
+  background-image: radial-gradient(at 0 bottom, rgba(118, 72, 160, 0.7) 0%, rgba(118, 72, 160, 0) 60%), radial-gradient(at 90% bottom, #523f8c 0%, rgba(82, 63, 140, 0) 40%), radial-gradient(at 50% top, rgba(84, 90, 182, 0.6) 0%, rgba(84, 90, 182, 0) 75%), radial-gradient(at right top, #794aa2 0%, rgba(121, 74, 162, 0) 57%);
+  background-size: auto,auto,100% 1000px,100% 1000px;
+  background-repeat: no-repeat; }
+  #home #section-intro .intro-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000129;
+    z-index: 0;
+    opacity: 0.4; }
+  #home #section-intro .intro-container {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 800px;
+    height: 200px;
+    z-index: 1;
+    margin-top: -100px; }
+    #home #section-intro .intro-container h1 {
+      padding-top: 25px;
+      font-size: 50px;
+      font-weight: 100;
+      text-align: center; }
+    #home #section-intro .intro-container p {
+      padding-top: 25px;
+      font-size: 18px; }
+    #home #section-intro .intro-container .special {
+      font-style: italic; }
+    #home #section-intro .intro-container .intro-container-float {
+      width: 50%;
+      height: 100%;
+      padding: 30px;
+      float: left; }
+    #home #section-intro .intro-container .right {
+      border-left: 1px solid #fff; }
+#home .section-plain-text {
+  width: 100%;
+  max-width: 1200px;
+  display: block;
+  margin: 0 auto;
+  padding: 100px; }
+  #home .section-plain-text h1 {
+    font-size: 56px; }
+  #home .section-plain-text p {
+    font-size: 20px;
+    line-height: 40px; }
+  #home .section-plain-text:after {
+    content: "";
+    display: table;
+    clear: both; }
+  #home .section-plain-text .description-text {
+    width: 1000px;
+    text-align: justify;
+    display: block;
+    margin: 0 auto; }
+#home #section-divider {
+  position: relative;
+  width: 100%;
+  padding: 100px;
+  color: #fff;
+  display: inline-block;
+  background-position: center center;
+  background-size: cover; }
+  #home #section-divider .cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: black;
+    opacity: 0.7; }
+  #home #section-divider .divider-icon {
+    height: 150px;
+    display: block;
+    margin: 20px auto; }
+
+/*# sourceMappingURL=home.css.map */

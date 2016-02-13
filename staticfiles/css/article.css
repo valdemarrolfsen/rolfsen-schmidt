@@ -1,0 +1,26 @@
+.article .korde-cover-image {
+  position: relative;
+  height: 60vh;
+  width: 100%;
+  display: inline-block;
+  background-position: center center;
+  background-size: cover; }
+  .article .korde-cover-image .cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4); }
+  .article .korde-cover-image .korde-icon {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 150px;
+    margin: 0 auto;
+    margin-top: -75px; }
+.article .korde-article-content {
+  padding: 50px 100px; }
+
+/*# sourceMappingURL=article.css.map */
