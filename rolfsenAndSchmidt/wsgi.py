@@ -20,7 +20,7 @@ activate_this = os.path.expanduser("/home/helpinghands/webapps/korde/rolfsen-sch
 exec(open("/home/helpinghands/webapps/korde/rolfsen-schmidt/venv/bin/activate_this.py").read())
 
 # Calculate the path based on the location of the WSGI script
-project = '/home/helpinghands/webapps/korde/rolfsen-schmidt/rolfsen'
+project = '/home/helpinghands/webapps/korde/rolfsen-schmidt/rolfsenAndSchmidt'
 workspace = os.path.dirname(project)
 sys.path.append(workspace)
 
