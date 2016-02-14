@@ -1,7 +1,7 @@
 'use strict';
 
 //-------------------- Application --------------------
-var main = angular.module('main', ['ngRoute', 'ngResource', 'ngAnimate',  'ngCookies']);
+var main = angular.module('main', ['ngRoute', 'ngResource', 'ngAnimate', 'ngCookies']);
 
 
 //-------------------- Configuration --------------------
@@ -28,8 +28,9 @@ main.config(function ($routeProvider) {
         })
         .when('/case_studies', {
             templateUrl: 'static/partials/case_studies.html'
-    .when('/contact', {
-        templateUrl: 'static/partials/contact.html'
+        })
+        .when('/contact', {
+            templateUrl: 'static/partials/contact.html'
         })
         .otherwise({redirectTo: '/'});
 });
