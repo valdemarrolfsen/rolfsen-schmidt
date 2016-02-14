@@ -14,7 +14,7 @@ main.controller('homeController', ['$scope', '$timeout', function homeController
 
     $timeout(function() {
     	$scope.show.introHeader = true;
-    }, 500)
+    }, 500);
 
     $timeout(function() {
     	$scope.show.introText = true;
