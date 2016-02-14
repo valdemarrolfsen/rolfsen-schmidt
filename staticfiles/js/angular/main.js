@@ -23,9 +23,9 @@ main.config(function ($routeProvider) {
                 controller: 'homeController',
                 templateUrl: 'static/partials/home.html'
             })
-        .when('/about', {
+        /*.when('/about', {
             templateUrl: 'static/partials/about.html'
-        })
+        })*/
         .when('/case_studies', {
             templateUrl: 'static/partials/case_studies.html'
         })
