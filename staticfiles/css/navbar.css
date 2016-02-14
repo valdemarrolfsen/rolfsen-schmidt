@@ -86,8 +86,6 @@
       background: #eee; }
     #navbar .navbar-default .navbar-toggle .icon-bar {
       background: #fff; }
-#navbar .navbar-collapse {
-  background: #222; }
 #navbar .with-background {
   background: #222; }
 @media (max-width: 768px) {
@@ -95,6 +93,8 @@
     color: #000; }
     #navbar .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, #navbar .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
       color: #255676;
-      background: #eee; } }
+      background: #eee; }
+  #navbar .navbar-collapse {
+    background: #222; } }
 
 /*# sourceMappingURL=navbar.css.map */

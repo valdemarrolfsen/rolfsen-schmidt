@@ -148,10 +148,6 @@
 	    }
 	}
 
-	.navbar-collapse {
-		background: #222;
-	}
-
 	.with-background {
 		background: #222;
 	}
@@ -164,5 +160,9 @@
 	            background: $bgHighlight;
 	        }
 	    }
+
+		.navbar-collapse {
+			background: #222;
+		}
 	}
 }
