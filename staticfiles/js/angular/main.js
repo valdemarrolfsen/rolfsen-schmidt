@@ -6,29 +6,29 @@ var main = angular.module('main', ['ngRoute', 'ngResource', 'ngAnimate',  'ngCoo
 
 //-------------------- Configuration --------------------
 
-main.config(function($interpolateProvider) {
+main.config(function ($interpolateProvider) {
     $interpolateProvider.startSymbol('{$');
     $interpolateProvider.endSymbol('$}');
-  });
+});
 
-main.config(function($httpProvider){
-  $httpProvider.defaults.xsrfCookieName = 'csrftoken';
-  $httpProvider.defaults.xsrfHeaderName = 'X-CSRFToken';
+main.config(function ($httpProvider) {
+    $httpProvider.defaults.xsrfCookieName = 'csrftoken';
+    $httpProvider.defaults.xsrfHeaderName = 'X-CSRFToken';
 });
 
 main.config(function ($routeProvider) {
-  $routeProvider
-    .when('/',
-      {
-        controller: 'homeController',
-        templateUrl: 'static/partials/home.html'
-      })
-    .when('/about', {
-        templateUrl: 'static/partials/about.html'
-    })
-    .when('/careers', {
-        templateUrl: 'static/partials/careers.html'
-    })
-      .otherwise({ redirectTo: '/' });
+    $routeProvider
+        .when('/',
+            {
+                controller: 'homeController',
+                templateUrl: 'static/partials/home.html'
+            })
+        .when('/about', {
+            templateUrl: 'static/partials/about.html'
+        })
+        .when('/careers', {
+            templateUrl: 'static/partials/careers.html'
+        })
+        .otherwise({redirectTo: '/'});
 });
 
