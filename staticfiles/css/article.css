@@ -1,3 +1,7 @@
+/* Nav color */
+/* Small media screen */
+/* Fonts */
+/* Colors */
 .article .korde-cover-image {
   position: relative;
   height: 60vh;
@@ -22,5 +26,8 @@
     margin-top: -75px; }
 .article .korde-article-content {
   padding: 50px 100px; }
+  @media (max-width: 768px) {
+    .article .korde-article-content {
+      padding: 20px 40px; } }
 
 /*# sourceMappingURL=article.css.map */

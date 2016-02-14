@@ -1,3 +1,5 @@
+@import "variables";
+
 .article {
   .korde-cover-image {
     position: relative;
@@ -33,5 +35,9 @@
 
   .korde-article-content {
     padding: 50px 100px;
+
+    @media (max-width: $smallMediaSize) {
+      padding: 20px 40px;
+    }
   }
 }
