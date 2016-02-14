@@ -26,6 +26,8 @@ main.config(function ($routeProvider) {
         .when('/about', {
             templateUrl: 'static/partials/about.html'
         })
+        .when('/case_studies', {
+            templateUrl: 'static/partials/case_studies.html'
     .when('/contact', {
         templateUrl: 'static/partials/contact.html'
         })
