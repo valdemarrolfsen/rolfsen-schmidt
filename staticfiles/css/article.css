@@ -24,6 +24,9 @@
     height: 150px;
     margin: 0 auto;
     margin-top: -75px; }
+  @media (max-width: 768px) {
+    .article .korde-cover-image {
+      height: 200px; } }
 .article .korde-article-content {
   padding: 50px 100px; }
   @media (max-width: 768px) {

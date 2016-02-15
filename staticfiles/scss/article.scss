@@ -31,6 +31,10 @@
       margin: 0 auto;
       margin-top: -75px;
     }
+
+    @media (max-width: $smallMediaSize) {
+      height: 200px;
+    }
   }
 
   .korde-article-content {
