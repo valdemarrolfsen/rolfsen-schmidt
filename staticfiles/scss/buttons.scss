@@ -1,0 +1,32 @@
+@import "mixins",
+  "variables";
+
+// Local mixins
+
+@mixin button($padding: 15px 40px, $bg: none, $color: #fff, $border: 2px solid #fff) {
+
+  // Custom style
+  padding: $padding;
+  background: $bg;
+  border: $border;
+  color: $color;
+}
+
+@mixin smoothHover($bg: #fff, $color: #222) {
+  @include smoothBackgroundShift();
+
+  &:hover {
+    background: $bg;
+    color: $color;
+  }
+}
+
+.no-bg-button {
+  @include button();
+  @include smoothHover();
+}
+
+.inline-button {
+  display: inline-block;
+  margin-right: 20px;
+}

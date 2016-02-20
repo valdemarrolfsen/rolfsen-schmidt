@@ -1,5 +1,69 @@
+@import "variables";
+// General heading style
+// -------------------
+
+h1 {
+  font-size: $h1-size;
+
+  @media (max-width: $smallMediaSize) {
+    font-size: $h1-size - 10px;
+  }
+}
+
+h2 {
+  font-size: $h2-size;
+
+  @media (max-width: $smallMediaSize) {
+    font-size: $h2-size;
+  }
+}
+
+h3 {
+  font-size: $h3-size;
+
+  @media (max-width: $smallMediaSize) {
+    font-size: $h3-size;
+  }
+}
+
+h4 {
+  font-size: $h4-size;
+
+  @media (max-width: $smallMediaSize) {
+    font-size: $h4-size;
+  }
+}
+
+h5 {
+  font-size: $h5-size;
+
+  @media (max-width: $smallMediaSize) {
+    font-size: $h5-size;
+  }
+}
+
+h6 {
+  font-size: $h6-size;
+
+  @media (max-width: $smallMediaSize) {
+    font-size: $h6-size;
+  }
+}
+
+p.big {
+  font-size: 22px;
+}
+
 .korde-thin {
   font-weight: 300;
+}
+
+.korde-very-thin {
+  font-weight: 100;
+}
+
+.korde-very-thick {
+  font-weight: 900;
 }
 
 
@@ -7,7 +71,43 @@
   text-align: center;
 }
 
+.korde-upper {
+  text-transform: uppercase;
+}
+
 
 .korde-text-24 {
   font-size: 24px;
+}
+
+// Font sizes
+// -------------------
+
+@for $i from 14 to 100 {
+  .font-size-#{$i} {
+    font-size: #{$i}px;
+
+    @media (max-width: $smallMediaSize) {
+      font-size: #{$i*0.5}px;
+    }
+  }
+}
+
+// Colors
+// -------------------
+
+.t-white {
+  color: #fff;
+}
+
+.t-red {
+  color: #A93737;
+}
+
+.t-blue {
+  color: #4AA1CE;
+}
+
+.t-purple {
+  color: rgb(32, 26, 74);
 }

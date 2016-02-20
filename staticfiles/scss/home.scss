@@ -5,15 +5,12 @@
 	#section-intro {
 		position: relative;
 		width: 100%;
-		height: 60vh;
+		height: 100vh;
 
 		padding: 50px 100px;
 		color: #fff;
 
-		background-color: #3B2F63;
-		background-image: radial-gradient(at 0 bottom, rgba(118,72,160,0.7) 0%,rgba(118,72,160,0) 60%),radial-gradient(at 90% bottom, #523f8c 0%,rgba(82,63,140,0) 40%),radial-gradient(at 50% top, rgba(84,90,182,0.6) 0%,rgba(84,90,182,0) 75%),radial-gradient(at right top, #794aa2 0%,rgba(121,74,162,0) 57%);
-		background-size: auto,auto,100% 1000px,100% 1000px;
-		background-repeat: no-repeat;
+		@include has-background();
 
 		.intro-cover {
 			position: absolute;
@@ -22,11 +19,26 @@
 			width: 100%;
 			height: 100%;
 			
-			background: $rsBlue;
+			background-color: #3B2F63;
+			background-image: radial-gradient(at 0 bottom, rgba(118,72,160,0.7) 0%,rgba(118,72,160,0) 60%),radial-gradient(at 90% bottom, #523f8c 0%,rgba(82,63,140,0) 40%),radial-gradient(at 50% top, rgba(84,90,182,0.6) 0%,rgba(84,90,182,0) 75%),radial-gradient(at right top, #794aa2 0%,rgba(121,74,162,0) 57%);
+			background-size: auto,auto,100% 1000px,100% 1000px;
+			background-repeat: no-repeat;
 			z-index: 0;
 
-			opacity: 0.4;
+			opacity: 0.6;
 
+		}
+
+		.intro-content {
+			position: relative;
+			padding-top: 30vh;
+			z-index: 1;
+
+			.intro-content-button {
+				display: inline-block;
+				margin: 40px;
+				font-size: 20px;
+			}
 		}
 
 		.intro-container {
@@ -100,6 +112,19 @@
 				}
 			}
 		}
+
+		@media (max-width: $smallMediaSize) {
+			padding: 20px;
+
+			.intro-content {
+				padding-top: 20vh;
+
+				.intro-content-button {
+					width: 100%;
+					margin: 10px 0px;
+				}
+			}
+		}
 	}
 
 	.section-plain-text {
@@ -151,6 +176,108 @@
 		}
 	}
 
+	#section-choice {
+		position: relative;
+		width: 100%;
+		height: 350px;
+
+		.choices-outer {
+			position: absolute;
+			width: 800px;
+			height: 300px;
+
+			top: 100px;
+			left: 0;
+			right: 0;
+
+			margin: 0 auto;
+
+			.choice {
+				position: absolute;
+				top: 0;
+
+				width: 300px;
+				height: 300px;
+
+				background: #4AA1CE;
+
+				box-shadow: 3px 3px 10px #888;
+
+				.choice-image {
+					position: absolute;
+					top: -40px;
+
+					width: 300px;
+					height: 300px;
+
+					@include has-background();
+					@include trans(all, 300ms);
+
+					.choice-cover {
+						cursor: pointer;
+						color: #fff;
+						padding-top: 80px;
+						@include cover(1, rgba(0,0,0,0.4));
+
+						span {
+							font-size: 100px;
+							color: #fff;
+						}
+					}
+				}
+			}
+
+			.left {
+				left: 0;
+
+				.choice-image {
+					left: 30px;
+
+					&:hover {
+						left: 40px;
+					}
+				}
+			}
+
+			.right {
+				right: 0;
+
+				.choice-image {
+					right: 30px;
+
+					&:hover {
+						right: 40px;
+					}
+				}
+			}
+		}
+	}
+
+	#section-contact {
+		position: relative;
+		height: 600px;
+		width: 100%;
+
+		@include has-background();
+
+		.text-section {
+			position: absolute;
+			right: 0;
+			height: 100%;
+			width: 35%;
+
+			padding: 210px 70px;
+			background: rgba(0,0,0,0.8);
+		}
+
+		@media (max-width: $smallMediaSize) {
+			.text-section {
+				width: 100%;
+				text-align: center;
+			}
+		}
+	}
+
 	#section-divider {
 		position: relative;
 		width: 100%;
@@ -164,7 +291,7 @@
 		background-size: cover;
 
 		.cover {
-			@include cover();
+			@include cover(0.7, rgb(34, 27, 76));
 		}
 
 		.divider-icon {

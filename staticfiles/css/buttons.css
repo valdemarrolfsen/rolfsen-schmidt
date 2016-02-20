@@ -1,0 +1,23 @@
+/* Nav color */
+/* Small media screen */
+/* Fonts */
+/* Colors */
+.no-bg-button {
+  padding: 15px 40px;
+  background: none;
+  border: 2px solid #fff;
+  color: #fff;
+  -webkit-transition: background-color 200ms linear;
+  -moz-transition: background-color 200ms linear;
+  -o-transition: background-color 200ms linear;
+  -ms-transition: background-color 200ms linear;
+  transition: background-color 200ms linear; }
+  .no-bg-button:hover {
+    background: #fff;
+    color: #222; }
+
+.inline-button {
+  display: inline-block;
+  margin-right: 20px; }
+
+/*# sourceMappingURL=buttons.css.map */

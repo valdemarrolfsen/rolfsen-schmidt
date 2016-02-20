@@ -27,6 +27,9 @@
 
 			<!-- Optional theme -->
 			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+            <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
 
 
             <link rel="stylesheet" type="text/css" href="{% static 'css/article.css' %}" />
@@ -36,6 +39,7 @@
             <link rel="stylesheet" type="text/css" href="{% static 'css/ng-animate.css' %}" />
             <link rel="stylesheet" type="text/css" href="{% static 'css/textstyle.css' %}" />
             <link rel="stylesheet" type="text/css" href="{% static 'css/case_studies.css' %}" />
+            <link rel="stylesheet" type="text/css" href="{% static 'css/buttons.css' %}" />
 
 
 		{% endblock head %}
@@ -85,12 +89,16 @@
 		<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
 	 	
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular-cookies.min.js"></script>
     	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular-resource.min.js"></script>
     	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular-route.min.js"></script>
     	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular-animate.min.js"></script>
+
+        <script src="{% static 'js/typed.js' %}"></script>
+        <script src="{% static 'js/angular/angular-scroll.min.js' %}"></script>
 
 		<!-- MAIN -->
     	<script src="{% static 'js/angular/main.js' %}"></script>
@@ -101,6 +109,7 @@
         <!-- DIRECTIVES -->
         <script src="{% static 'js/angular/directives/navScroll.js' %}"></script>
         <script src="{% static 'js/angular/directives/navToggle.js' %}"></script>
+        <script src="{% static 'js/angular/directives/writable.js' %}"></script>
 
 	</body>
 </html>

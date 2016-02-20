@@ -16,10 +16,16 @@
       top: 0;
       left: 0;
 
+      padding-top: 180px;
+
       height: 100%;
       width: 100%;
 
       background: rgba(0,0,0,0.4);
+
+      @media (max-width: $smallMediaSize) {
+        padding-top: 60px;
+      }
     }
 
     .korde-icon {
@@ -38,6 +44,11 @@
   }
 
   .korde-article-content {
+
+    max-width: 1000px;
+    display: block;
+    margin: 0 auto;
+
     padding: 50px 100px;
 
     @media (max-width: $smallMediaSize) {

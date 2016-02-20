@@ -1,7 +1,7 @@
 'use strict';
 
 //-------------------- Application --------------------
-var main = angular.module('main', ['ngRoute', 'ngResource', 'ngAnimate', 'ngCookies']);
+var main = angular.module('main', ['ngRoute', 'ngResource', 'ngAnimate', 'ngCookies', 'duScroll']);
 
 
 //-------------------- Configuration --------------------

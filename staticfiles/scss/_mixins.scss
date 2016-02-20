@@ -1,4 +1,4 @@
-@mixin cover($color: rgb(0,0,0), $opacity: 0.7) {
+@mixin cover( $opacity: 0.7, $color: rgb(0,0,0)) {
 
   //Fixed style
   position: absolute;
@@ -8,4 +8,25 @@
   //Variable style
   background: $color;
   opacity: $opacity;
+}
+
+@mixin has-background() {
+  background-position: center center;
+  background-size: cover;
+}
+
+@mixin trans($type: all, $time: 500ms) {
+  -webkit-transition: $type $time ease;
+  -moz-transition: $type $time ease;
+  -ms-transition: $type $time ease;
+  -o-transition: $type $time ease;
+  transition: $type $time ease;
+}
+
+@mixin smoothBackgroundShift() {
+	-webkit-transition: background-color 200ms linear;
+    -moz-transition: background-color 200ms linear;
+    -o-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
+    transition: background-color 200ms linear;
 }

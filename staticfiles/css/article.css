@@ -13,9 +13,13 @@
     position: absolute;
     top: 0;
     left: 0;
+    padding-top: 180px;
     height: 100%;
     width: 100%;
     background: rgba(0, 0, 0, 0.4); }
+    @media (max-width: 768px) {
+      .article .korde-cover-image .cover {
+        padding-top: 60px; } }
   .article .korde-cover-image .korde-icon {
     position: absolute;
     top: 50%;
@@ -28,6 +32,9 @@
     .article .korde-cover-image {
       height: 200px; } }
 .article .korde-article-content {
+  max-width: 1000px;
+  display: block;
+  margin: 0 auto;
   padding: 50px 100px; }
   @media (max-width: 768px) {
     .article .korde-article-content {
