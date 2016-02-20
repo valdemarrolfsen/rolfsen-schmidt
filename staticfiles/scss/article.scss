@@ -44,15 +44,17 @@
   }
 
   .korde-article-content {
-
-    max-width: 1000px;
-    display: block;
-    margin: 0 auto;
-
     padding: 50px 100px;
 
     @media (max-width: $smallMediaSize) {
-      padding: 20px 40px;
+      padding: 20px;
     }
   }
+
+  .korde-article-content-small {
+    max-width: 1000px;
+    display: block;
+    margin: 0 auto;
+  }
+
 }

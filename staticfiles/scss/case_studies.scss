@@ -1,3 +1,28 @@
+@import "mixins";
+
 .logos {
   padding-top: 20px;
+}
+
+.korde-project {
+  width: 100%;
+
+  display: inline-block;
+  margin: 10px 0;
+
+  padding: 20px;
+  color: #000;
+
+  background: #fefefe;
+  border: 1px solid #bbb;
+
+  .project-image {
+    width: 200px;
+    height: 200px;
+
+    display: block;
+    margin: 0 auto;
+
+    @include has-background();
+  }
 }

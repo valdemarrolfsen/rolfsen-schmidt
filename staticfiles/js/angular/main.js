@@ -30,6 +30,7 @@ main.config(function ($routeProvider) {
             templateUrl: 'static/partials/case_studies.html'
         })
         .when('/contact', {
+            controller: 'contactController',
             templateUrl: 'static/partials/contact.html'
         })
         .otherwise({redirectTo: '/'});

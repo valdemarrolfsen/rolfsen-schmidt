@@ -32,12 +32,13 @@
     .article .korde-cover-image {
       height: 200px; } }
 .article .korde-article-content {
-  max-width: 1000px;
-  display: block;
-  margin: 0 auto;
   padding: 50px 100px; }
   @media (max-width: 768px) {
     .article .korde-article-content {
-      padding: 20px 40px; } }
+      padding: 20px; } }
+.article .korde-article-content-small {
+  max-width: 1000px;
+  display: block;
+  margin: 0 auto; }
 
 /*# sourceMappingURL=article.css.map */
