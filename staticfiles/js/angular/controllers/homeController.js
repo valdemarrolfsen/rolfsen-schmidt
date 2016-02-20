@@ -20,7 +20,4 @@ main.controller('homeController', ['$scope', '$timeout', function homeController
     	$scope.show.introText = true;
     }, 1500)
 
-
-
-
 }]);
