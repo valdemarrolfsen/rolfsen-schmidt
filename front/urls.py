@@ -4,7 +4,9 @@ from rest_framework import renderers
 from front import views
 
 
-urlpatterns = [
+viewpatterns = [
+
+    url(r'^sendemail', views.send_mail_view, name='sendemail'),
 
     # --------------- Landing related ----------------
     url(r'^$', views.landing_view, name='landing'),
@@ -14,3 +16,5 @@ urlpatterns = [
     #url(r'rest/room/(?P<jobId>\d+)/(?P<applicantId>\d+)/$', views.ChatRoomView.as_view()),
 
 ]
+
+urlpatterns = format_suffix_patterns(viewpatterns)

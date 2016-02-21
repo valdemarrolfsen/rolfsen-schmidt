@@ -31,22 +31,22 @@
             <div class="col-md-4">
                 <div class="contact-section contact-section-form">
                     <h3 class="korde-very-thin">Kontaktskjema</h3>
-                    <form action="">
+                    <form ng-submit="submitInfo()">
                         <div class="input-field">
                             <span class="fa fa-user"></span>
-                            <input type="text" placeholder="Ditt navn">
+                            <input type="text" ng-model = "info.name" placeholder="Ditt navn" required>
                         </div>
                         <div class="input-field">
                             <span class="fa fa-envelope-o"></span>
-                            <input type="text" placeholder="Din epost">
+                            <input type="email" ng-model="info.email" placeholder="Din epost" required>
                         </div>
                         <div class="input-field">
                             <span class="fa fa-phone"></span>
-                            <input type="text" placeholder="Ditt telefonnummer">
+                            <input type="tel" ng-model="info.phone" placeholder="Ditt telefonnummer" required>
                         </div>
                         <div class="input-field">
                             <span class="fa fa-comment"></span>
-                            <textarea rows="5" placeholder="Skriv din kommentar her"></textarea>
+                            <textarea rows="5" ng-model="info.description" placeholder="Skriv din kommentar her" required></textarea>
                         </div>
                         <button class="button-positive button-fill margin-top-15 font-size-18">Send inn</button>
                     </form>
