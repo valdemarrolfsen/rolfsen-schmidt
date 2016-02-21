@@ -3,12 +3,13 @@
 
 // Local mixins
 
-@mixin button($padding: 15px 40px, $bg: none, $color: #fff, $border: 2px solid #fff) {
+@mixin button($padding: 15px 40px, $bg: none, $color: #fff, $border: 1px solid #fff, $radius: 0px) {
 
   // Custom style
   padding: $padding;
   background: $bg;
   border: $border;
+  border-radius: $radius;
   color: $color;
 }
 
@@ -22,7 +23,7 @@
 }
 
 .no-bg-button {
-  @include button();
+  @include button($radius: 3px);
   @include smoothHover();
 }
 

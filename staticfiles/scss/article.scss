@@ -16,15 +16,18 @@
       top: 0;
       left: 0;
 
-      padding-top: 180px;
+      min-height: 60vh;
+      line-height: 61vh;
 
       height: 100%;
       width: 100%;
 
       background: rgba(0,0,0,0.4);
 
-      @media (max-width: $smallMediaSize) {
-        padding-top: 60px;
+      .cover-inner {
+        display: inline-block;
+        line-height: 40px;
+        vertical-align: middle;
       }
     }
 
@@ -40,6 +43,11 @@
 
     @media (max-width: $smallMediaSize) {
       height: 200px;
+
+      .cover {
+        min-height: 200px;
+        line-height: 201px;
+      }
     }
   }
 

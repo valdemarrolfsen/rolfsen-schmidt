@@ -5,7 +5,8 @@
 .no-bg-button {
   padding: 15px 40px;
   background: none;
-  border: 2px solid #fff;
+  border: 1px solid #fff;
+  border-radius: 3px;
   color: #fff;
   -webkit-transition: background-color 200ms linear;
   -moz-transition: background-color 200ms linear;
@@ -20,6 +21,7 @@
   padding: 15px 0;
   background: #201a4a;
   border: none;
+  border-radius: 0px;
   color: #fff; }
 
 .button-fill {

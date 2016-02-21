@@ -3,14 +3,14 @@
  */
 main.controller('contactController', ['$scope', function($scope) {
 
-    var map = L.map('map').setView([59.8950234, 10.6290052], 15);
+    var map = L.map('map').setView([63.4218305, 10.4046033], 16);
     map.scrollWheelZoom.disable();
 
     var customIcon = L.icon({
         iconUrl: '/static/img/icons/korde-pin.png',
 
-        iconSize:     [63.9, 86.55], // size of the icon
-        iconAnchor:   [31.95, 86.55], // point of the icon which will correspond to marker's location
+        iconSize:     [49.85, 74.3], // size of the icon
+        iconAnchor:   [24.925, 74.3], // point of the icon which will correspond to marker's location
         popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
     });
 
@@ -18,7 +18,7 @@ main.controller('contactController', ['$scope', function($scope) {
         attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
 
-    L.marker([59.8950234, 10.6290052], {icon: customIcon}).addTo(map)
+    L.marker([63.4218305, 10.4046033], {icon: customIcon}).addTo(map)
         //.bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
         //.openPopup();
 }]);

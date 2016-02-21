@@ -291,7 +291,7 @@
 		background-size: cover;
 
 		.cover {
-			@include cover(0.7, rgb(34, 27, 76));
+			@include cover(0.7, #1D1001);
 		}
 
 		.divider-icon {

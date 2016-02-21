@@ -8,7 +8,7 @@
   padding: 20px;
   color: #000;
   background: #fefefe;
-  border: 1px solid #bbb; }
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); }
   .korde-project .project-image {
     width: 200px;
     height: 200px;
