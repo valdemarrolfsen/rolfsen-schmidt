@@ -8,16 +8,14 @@
 
 			<title>{% block title %}Korde{% endblock title %}</title>
 
-			<link rel="icon" type="image/png" href="{% static 'img/jobbr-logo/jobbr-logo-2.png' %}">
-
 			<!-- iPhone app setup-->
 	        <meta name="apple-mobile-web-app-capable" content="yes">
 	        <meta name="apple-mobile-web-app-status-bar-style" content="black">
-	        <link rel="apple-touch-icon" href="{% static 'img/icons/helpinghands_logo.png' %}">
+	        <link rel="apple-touch-icon" href="{% static 'img/logo/korde_circle-min.png' %}">
             <meta name="application-name" content="Helping Hands" />
-            <meta name="msapplication-square150x150logo" content="{% static 'img/icons/helpinghands_logo.png' %}" />
+            <meta name="msapplication-square150x150logo" content="{% static 'img/logo/korde_circle-min.png' %}" />
 
-			<link rel="icon" type="image/png" href="{% static 'img/icons/logo_black.png' %}" sizes="32x32">
+			<link rel="icon" type="image/png" href="{% static 'img/logo/korde_circle-min.png' %}" sizes="32x32">
 
 			<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
             <link href='https://fonts.googleapis.com/css?family=Raleway:400,300italic,300,200italic,200,100italic,100,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic' rel='stylesheet' type='text/css'>
@@ -73,7 +71,7 @@
 			</nav>
 		</div>
 
-		<ng-view></ng-view>
+		<ng-view autoscroll="true"></ng-view>
 
 		<footer class = "copyright">
 			<div class="container">
@@ -110,6 +108,7 @@
     	<!-- CONTROLLERS -->
     	<script src="{% static 'js/angular/controllers/homeController.js' %}"></script>
     	<script src="{% static 'js/angular/controllers/contactController.js' %}"></script>
+    	<script src="{% static 'js/angular/controllers/caseStudiesController.js' %}"></script>
 
         <!-- DIRECTIVES -->
         <script src="{% static 'js/angular/directives/navScroll.js' %}"></script>

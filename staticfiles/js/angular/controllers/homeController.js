@@ -4,8 +4,7 @@
 'use strict';
 
 main.controller('homeController', ['$scope', '$timeout', function homeController($scope, $timeout) {
-
-    $scope.text = 'Hello world';
+    window.document.title = "Velkommen | Korde et digitalt studio";
 
     $scope.show = {};
     $scope.show.introHeader = false;

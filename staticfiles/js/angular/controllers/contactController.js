@@ -3,6 +3,8 @@
  */
 main.controller('contactController', ['$scope', 'MailSender', 'SweetAlert', function ($scope, MailSender, SweetAlert) {
 
+    window.document.title = "Kontakt oss | Korde et digitalt studio";
+
     $scope.submitInfo = function () {
         MailSender.send($scope.info).then(function success() {
             SweetAlert.swal({
