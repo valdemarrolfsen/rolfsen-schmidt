@@ -54,9 +54,14 @@
   .korde-article-content {
     padding: 50px 100px;
 
+    .article-info {
+      list-style: none;
+    }
+
     @media (max-width: $smallMediaSize) {
       padding: 20px;
     }
+
   }
 
   .korde-article-content-small {

@@ -29,15 +29,15 @@
         <div class="cover"></div>
         <div class="row">
             <div class="col-md-4">
-                <img class="divider-icon" src="/static/img/icons/ai.png" alt="">
+                <img class="divider-icon" src="/static/img/icons/ai.png" alt="Kunstig intelligens">
                 <p class="korde-text-24 korde-center korde-thin">Kunstig intelligens</p>
             </div>
             <div class="col-md-4">
-                <img class="divider-icon" src="/static/img/icons/design.png" alt="">
+                <img class="divider-icon" src="/static/img/icons/design.png" alt="På alle enheter">
                 <p class="korde-text-24 korde-center korde-thin">På alle enheter</p>
             </div>
             <div class="col-md-4">
-                <img class="divider-icon" src="/static/img/icons/bigdata.png" alt="">
+                <img class="divider-icon" src="/static/img/icons/bigdata.png" alt="Big data">
                 <p class="korde-text-24 korde-center korde-thin">Big data</p>
             </div>
         </div>
@@ -50,6 +50,25 @@
                 våre kunder. Kordes utviklingsteam jobber effektivt og kan alltid levere løsninger av høy kvalitet i god
                 tid.
             </p>
+        </div>
+    </section>
+    <section id="section-divider" style="background-image: url('/static/img/background/office.jpg');">
+        <div class="cover"></div>
+        <div class="row">
+            <div class="col-md-2 col-md-offset-1">
+                <h1>Nyheter</h1>
+            </div>
+            <div class="col-md-2" ng-repeat="article in articles">
+                <a ng-href="#/news/{$ article.id $}">
+                    <div class="korde-news">
+                        <div class="news-image"
+                             ng-style="{'background-image':'url({$ article.thumbnail_image_url $})'}">
+                        </div>
+                        <h3 class="korde-thin">{$ article.title $}</h3>
+                        <small>{$ article.created_at | date: 'dd.MM.yyyy' $} | {$ article.author_name $}</small>
+                    </div>
+                </a>
+            </div>
         </div>
     </section>
     <section id="section-contact" style="background-image: url('/static/img/background/city-skyline.jpg');">

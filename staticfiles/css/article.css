@@ -38,6 +38,8 @@
         xline-height: 201px; } }
 .article .korde-article-content {
   padding: 50px 100px; }
+  .article .korde-article-content .article-info {
+    list-style: none; }
   @media (max-width: 768px) {
     .article .korde-article-content {
       padding: 20px; } }

@@ -26,6 +26,9 @@ body {
     font-size: 18px;
     font-weight: 300; }
 
+.width-fill {
+  width: 100%; }
+
 .typed-cursor {
   display: none;
   opacity: 1;

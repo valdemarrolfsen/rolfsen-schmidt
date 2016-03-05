@@ -1,0 +1,31 @@
+<div class="article">
+    <section class="korde-cover-image" ng-style="{'background-image':'url({$ article.thumbnail_image_url $})'}">
+        <div class="cover korde-center t-white">
+            <div class="cover-inner">
+                <h1 class="font-size-60 korde-very-thick korde-upper">{$ article.title $}</h1>
+            </div>
+        </div>
+    </section>
+    <section class="korde-article-content korde-article-content-small p-20-0">
+        <div class="row">
+            <div class="col-md-6">
+                <ul class="article-info">
+                    <li>Publisert: {$ article.created_at | date:'dd MMM yyyy' $}</li>
+                    <li>Skrevet av: {$ article.author_name $}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h1>{$ article.title $}</h1>
+                <p ng-bind-html="article.body_text">{$ article.body_text $}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div ng-class="{'col-md-6': !element.width_type, 'col-md-12': element.width_type}" ng-repeat="element in article.elements">
+                <div ng-if="element.text" ng-bind-html="element.text">{$ element.text $}</div>
+                <div ng-if="element.image_url"><img class="width-fill" ng-src="{$ element.image_url $}" alt="Artikkelbilde"></div>
+            </div>
+        </div>
+    </section>
+</div>

@@ -1,7 +1,7 @@
 'use strict';
 
 //-------------------- Application --------------------
-var main = angular.module('main', ['ngRoute', 'ngResource', 'ngAnimate', 'ngCookies', 'duScroll']);
+var main = angular.module('main', ['ngRoute', 'ngResource', 'ngAnimate', 'ngCookies', 'duScroll', 'KordeCms', 'ngSanitize']);
 
 
 //-------------------- Configuration --------------------
@@ -33,6 +33,15 @@ main.config(function ($routeProvider) {
         .when('/contact', {
             controller: 'contactController',
             templateUrl: 'static/partials/contact.html'
+        })
+        .when('/news/:id', {
+            controller: 'singleNewsController',
+            templateUrl: 'static/partials/single_news.html',
+            resolve: {
+                article: function (ArticleFactory ,$route) {
+                    return ArticleFactory.get($route.current.params.id)
+                }
+            }
         })
         .otherwise({redirectTo: '/'});
 });

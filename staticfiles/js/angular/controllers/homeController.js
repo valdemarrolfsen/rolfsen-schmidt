@@ -3,8 +3,8 @@
  */
 'use strict';
 
-main.controller('homeController', ['$scope', '$timeout', function homeController($scope, $timeout) {
-    window.document.title = "Velkommen | Korde et digitalt studio";
+main.controller('homeController', ['$scope', '$timeout','ArticleFactory', function homeController($scope, $timeout, ArticleFactory) {
+    window.document.title = "Korde et digitalt studio";
 
     $scope.show = {};
     $scope.show.introHeader = false;
@@ -18,5 +18,14 @@ main.controller('homeController', ['$scope', '$timeout', function homeController
     $timeout(function() {
     	$scope.show.introText = true;
     }, 1500)
+
+
+    ArticleFactory.list(3).then(function(response){
+        //Success
+        $scope.articles = response.data;
+
+    }, function(response){
+        //Error
+    });
 
 }]);
