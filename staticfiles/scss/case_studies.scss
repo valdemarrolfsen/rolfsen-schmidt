@@ -1,4 +1,4 @@
-@import "mixins";
+@import "mixins","variables";
 
 .logos {
   padding-top: 20px;
@@ -30,16 +30,26 @@
 
 .korde-news {
   width: 100%;
-  display: inline-block;
-  color: #fff;
 
-  .news-image {
+  .korde-news-content {
     width: 100%;
-    height: 100px;
 
-    display: block;
-    margin: 0 auto;
+    .news-image {
+      @include has-background();
+    }
 
-    @include has-background();
+    .small {
+      height: 200px;
+    }
+  }
+}
+
+.korde-news-border {
+  box-shadow: 0 0 3px rgba(0,0,0,0.2);
+  background: $light;
+  @include trans();
+
+  &:hover {
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
   }
 }

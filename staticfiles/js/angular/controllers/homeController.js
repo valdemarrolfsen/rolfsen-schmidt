@@ -18,14 +18,4 @@ main.controller('homeController', ['$scope', '$timeout','ArticleFactory', functi
     $timeout(function() {
     	$scope.show.introText = true;
     }, 1500)
-
-
-    ArticleFactory.list(3).then(function(response){
-        //Success
-        $scope.articles = response.data;
-
-    }, function(response){
-        //Error
-    });
-
 }]);

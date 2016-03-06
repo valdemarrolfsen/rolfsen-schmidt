@@ -15,6 +15,27 @@
   background-size: cover;
 }
 
+// Positioning
+// ----------------------------
+
+@mixin fixed-top() {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+@mixin place($type: absolute, $vertical: 0, $horizontal: 0) {
+  position: $type;
+  top: $vertical;
+  left: $horizontal;
+}
+
+@mixin center-absolute() {
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
 @mixin trans($type: all, $time: 500ms) {
   -webkit-transition: $type $time ease;
   -moz-transition: $type $time ease;

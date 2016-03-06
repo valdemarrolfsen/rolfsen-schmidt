@@ -210,5 +210,31 @@
       #home #section-divider .divider-icon {
         height: 80px;
         margin-top: 100px; } }
+#home #section-news {
+  position: relative;
+  width: 100%;
+  padding: 50px 100px;
+  color: #fff;
+  display: inline-block;
+  background-position: center center;
+  background-size: cover; }
+  #home #section-news .cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #1D1001;
+    opacity: 0.7; }
+  #home #section-news .divider-icon {
+    height: 150px;
+    display: block;
+    margin: 20px auto; }
+  @media (max-width: 768px) {
+    #home #section-news {
+      padding-top: 0px; }
+      #home #section-news .divider-icon {
+        height: 80px;
+        margin-top: 100px; } }
 
 /*# sourceMappingURL=home.css.map */

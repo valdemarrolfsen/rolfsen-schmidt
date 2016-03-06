@@ -1,127 +1,143 @@
 {% load staticfiles %}
 <!Doctype HTML>
 <html>
-	<head>
-		{% block head %}
-			<meta charset="utf-8">
-			<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    {% block head %}
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-			<title>{% block title %}Korde{% endblock title %}</title>
+        <title>{% block title %}Korde{% endblock title %}</title>
 
-			<!-- iPhone app setup-->
-	        <meta name="apple-mobile-web-app-capable" content="yes">
-	        <meta name="apple-mobile-web-app-status-bar-style" content="black">
-	        <link rel="apple-touch-icon" href="{% static 'img/logo/korde_circle-min.png' %}">
-            <meta name="application-name" content="Helping Hands" />
-            <meta name="msapplication-square150x150logo" content="{% static 'img/logo/korde_circle-min.png' %}" />
+        <meta property="og:url"
+              content="http://www.korde.no"/>
+        <meta property="og:title" content="Et digitalt studio"/>
+        <meta property="og:description"
+              content="Korde er et digitalt studio som skaper og utvikler produkter for både startups og etablerte selskaper. Gjennom egne idéer og prosjekter holder vi oss alltid oppdatert på den nyeste teknologien og leverer nyskapende digitale plattformer for våre kunder."/>
+        <meta property="og:image"
+              content="http://www.korde.no/static/img/background/city-skyline.jpg"/>
 
-			<link rel="icon" type="image/png" href="{% static 'img/logo/korde_circle-min.png' %}" sizes="32x32">
+        <!-- iPhone app setup-->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon" href="{% static 'img/logo/korde_circle-min.png' %}">
+        <meta name="application-name" content="Helping Hands"/>
+        <meta name="msapplication-square150x150logo" content="{% static 'img/logo/korde_circle-min.png' %}"/>
 
-			<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
-            <link href='https://fonts.googleapis.com/css?family=Raleway:400,300italic,300,200italic,200,100italic,100,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic' rel='stylesheet' type='text/css'>
+        <link rel="icon" type="image/png" href="{% static 'img/logo/korde_circle-min.png' %}" sizes="32x32">
 
-			<!-- Latest compiled and minified CSS -->
-			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet'
+              type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Raleway:400,300italic,300,200italic,200,100italic,100,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic'
+              rel='stylesheet' type='text/css'>
 
-			<!-- Optional theme -->
-			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 
-            <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
-            <link rel="stylesheet" type="text/css" href="{% static 'bower_components/sweetalert2/dist/sweetalert2.css' %}" />
+        <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css"/>
 
-            <link rel="stylesheet" type="text/css" href="{% static 'css/article.css' %}" />
-            <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}" />
-            <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}" />
-            <link rel="stylesheet" type="text/css" href="{% static 'css/navbar.css' %}" />
-            <link rel="stylesheet" type="text/css" href="{% static 'css/ng-animate.css' %}" />
-            <link rel="stylesheet" type="text/css" href="{% static 'css/textstyle.css' %}" />
-            <link rel="stylesheet" type="text/css" href="{% static 'css/case_studies.css' %}" />
-            <link rel="stylesheet" type="text/css" href="{% static 'css/buttons.css' %}" />
-            <link rel="stylesheet" type="text/css" href="{% static 'css/contact.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'bower_components/sweetalert2/dist/sweetalert2.css' %}"/>
 
-
-		{% endblock head %}
-	</head>
-	<body ng-app="main">
-
-		<div id = "navbar">
-			<nav nav-scroll nav-toggle class="navbar navbar-default navbar-fixed-top" role="navigation">
-				<!-- Brand and toggle get grouped for better mobile display -->
-				<div class="navbar-header page-scroll">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-3">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand page-scroll" href="#/"><img src="/static/img/logo/korde.png" alt=""></a>
-				</div>
-
-			  <!-- Collect the nav links, forms, and other content for toggling -->
-			  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-3">
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#/">Hjem</a></li>
-					<!--<li><a href="#/about">Om oss</a></li>-->
-					<li><a href="#/case_studies">Arbeid</a></li>
-					<li><a href="#/contact">Kontakt</a></li>
-				</ul>
-			  </div><!-- /.navbar-collapse -->
-			</nav>
-		</div>
-
-		<ng-view autoscroll="true"></ng-view>
-
-		<footer class = "copyright">
-			<div class="container">
-				<div class="row text-center">
-					<div class="col-md-4">
-					</div>
-					<div class="col-md-4">
-						<span><h6>Copyright &copy; <strong>Korde</strong> 2016</h6></span>
-					</div>
-				</div>
-			</div>
-		</footer>
-
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-		<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-        <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
-	 	
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular-cookies.min.js"></script>
-    	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular-resource.min.js"></script>
-    	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular-route.min.js"></script>
-    	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular-animate.min.js"></script>
-    	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular-sanitize.min.js"></script>
-
-        <script src="{% static 'js/typed.js' %}"></script>
-        <script src="{% static 'js/angular/angular-scroll.min.js' %}"></script>
-        <script src="{% static 'bower_components/sweetalert2/dist/sweetalert2.min.js' %}"></script>
-        <script src="{% static 'bower_components/ng-file-upload/ng-file-upload-all.min.js' %}"></script>
-        <script src="{% static 'js/ngKordeCms.js' %}"></script>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/article.css' %}"/>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}"/>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}"/>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/navbar.css' %}"/>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/ng-animate.css' %}"/>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/textstyle.css' %}"/>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/case_studies.css' %}"/>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/buttons.css' %}"/>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/contact.css' %}"/>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/properties.css' %}"/>
 
 
-		<!-- MAIN -->
-    	<script src="{% static 'js/angular/main.js' %}"></script>
+    {% endblock head %}
+</head>
+<body ng-app="main">
 
-    	<!-- CONTROLLERS -->
-    	<script src="{% static 'js/angular/controllers/homeController.js' %}"></script>
-    	<script src="{% static 'js/angular/controllers/contactController.js' %}"></script>
-    	<script src="{% static 'js/angular/controllers/caseStudiesController.js' %}"></script>
-    	<script src="{% static 'js/angular/controllers/singleNewsController.js' %}"></script>
+<div id="navbar">
+    <nav nav-scroll nav-toggle class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-3">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand page-scroll" href="#/"><img src="/static/img/logo/korde.png" alt=""></a>
+        </div>
 
-        <!-- DIRECTIVES -->
-        <script src="{% static 'js/angular/directives/navScroll.js' %}"></script>
-        <script src="{% static 'js/angular/directives/navToggle.js' %}"></script>
-        <script src="{% static 'js/angular/directives/writable.js' %}"></script>
-        <script src="{% static 'js/angular/directives/smoothScroll.js' %}"></script>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-3">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#/">Hjem</a></li>
+                <!--<li><a href="#/about">Om oss</a></li>-->
+                <li><a href="#/case_studies">Arbeid</a></li>
+                <li><a href="#/blog">Blogg</a></li>
+                <li><a href="#/contact">Kontakt</a></li>
 
-        <!-- SERVICES -->
-        <script src="{% static 'js/angular/services.js' %}"></script>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </nav>
+</div>
 
-	</body>
+<ng-view autoscroll="true"></ng-view>
+
+<footer class="copyright">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
+                <span><h6>Copyright &copy; <strong>Korde</strong> 2016</h6></span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular-cookies.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular-resource.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular-route.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular-animate.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular-sanitize.min.js"></script>
+
+<script src="{% static 'js/typed.js' %}"></script>
+<script src="{% static 'js/angular/angular-scroll.min.js' %}"></script>
+<script src="{% static 'bower_components/sweetalert2/dist/sweetalert2.min.js' %}"></script>
+<script src="{% static 'bower_components/angular-socialshare/src/js/angular-socialshare.js' %}"></script>
+<script src="{% static 'bower_components/ng-file-upload/ng-file-upload-all.min.js' %}"></script>
+<script src="{% static 'js/ngKordeCms.js' %}"></script>
+
+
+<!-- MAIN -->
+<script src="{% static 'js/angular/main.js' %}"></script>
+
+<!-- CONTROLLERS -->
+<script src="{% static 'js/angular/controllers/homeController.js' %}"></script>
+<script src="{% static 'js/angular/controllers/contactController.js' %}"></script>
+<script src="{% static 'js/angular/controllers/caseStudiesController.js' %}"></script>
+<script src="{% static 'js/angular/controllers/blogPostController.js' %}"></script>
+<script src="{% static 'js/angular/controllers/blogController.js' %}"></script>
+
+<!-- DIRECTIVES -->
+<script src="{% static 'js/angular/directives/navScroll.js' %}"></script>
+<script src="{% static 'js/angular/directives/navToggle.js' %}"></script>
+<script src="{% static 'js/angular/directives/writable.js' %}"></script>
+<script src="{% static 'js/angular/directives/smoothScroll.js' %}"></script>
+
+<!-- SERVICES -->
+<script src="{% static 'js/angular/services.js' %}"></script>
+
+</body>
 </html>

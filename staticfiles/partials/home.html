@@ -52,25 +52,6 @@
             </p>
         </div>
     </section>
-    <section id="section-divider" style="background-image: url('/static/img/background/office.jpg');">
-        <div class="cover"></div>
-        <div class="row">
-            <div class="col-md-2 col-md-offset-1">
-                <h1>Nyheter</h1>
-            </div>
-            <div class="col-md-2" ng-repeat="article in articles">
-                <a ng-href="#/news/{$ article.id $}">
-                    <div class="korde-news">
-                        <div class="news-image"
-                             ng-style="{'background-image':'url({$ article.thumbnail_image_url $})'}">
-                        </div>
-                        <h3 class="korde-thin">{$ article.title $}</h3>
-                        <small>{$ article.created_at | date: 'dd.MM.yyyy' $} | {$ article.author_name $}</small>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
     <section id="section-contact" style="background-image: url('/static/img/background/city-skyline.jpg');">
         <div class="text-section">
             <h1 class="t-white korde-very-thin">Kontakt oss</h1>

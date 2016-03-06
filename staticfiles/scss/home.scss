@@ -310,4 +310,36 @@
 			}
 		}
 	}
+  	#section-news {
+		position: relative;
+		width: 100%;
+
+		padding: 50px 100px;
+
+		color: #fff;
+
+		display: inline-block;
+		background-position: center center;
+		background-size: cover;
+
+		.cover {
+			@include cover(0.7, #1D1001);
+		}
+
+		.divider-icon {
+			height: 150px;
+
+			display: block;
+			margin: 20px auto;
+		}
+
+		@media (max-width: $smallMediaSize) {
+			padding-top: 0px;
+
+			.divider-icon {
+				height: 80px;
+				margin-top: 100px;
+			}
+		}
+	}
 }

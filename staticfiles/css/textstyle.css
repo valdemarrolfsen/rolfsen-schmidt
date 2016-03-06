@@ -59,6 +59,12 @@ p.big {
 .korde-text-24 {
   font-size: 24px; }
 
+.korde-no-decoration {
+  text-decoration: none; }
+  .korde-no-decoration:hover, .korde-no-decoration:focus {
+    color: #d396d2;
+    text-decoration: none; }
+
 .font-size-14 {
   font-size: 14px; }
   @media (max-width: 768px) {
@@ -592,5 +598,8 @@ p.big {
 
 .t-orange {
   color: #DE9E57; }
+
+.t-dark {
+  color: #222; }
 
 /*# sourceMappingURL=textstyle.css.map */

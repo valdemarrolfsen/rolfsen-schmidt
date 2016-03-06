@@ -1,7 +1,7 @@
 'use strict';
 
 //-------------------- Application --------------------
-var main = angular.module('main', ['ngRoute', 'ngResource', 'ngAnimate', 'ngCookies', 'duScroll', 'KordeCms', 'ngSanitize']);
+var main = angular.module('main', ['ngRoute', 'ngResource', 'ngAnimate', 'ngCookies', 'duScroll', 'KordeCms', 'ngSanitize', '720kb.socialshare']);
 
 
 //-------------------- Configuration --------------------
@@ -34,12 +34,21 @@ main.config(function ($routeProvider) {
             controller: 'contactController',
             templateUrl: 'static/partials/contact.html'
         })
-        .when('/news/:id', {
-            controller: 'singleNewsController',
-            templateUrl: 'static/partials/single_news.html',
+        .when('/blog', {
+            controller: 'blogController',
+            templateUrl: 'static/partials/blog.html',
+            resolve: {
+                articles: function (ArticleFactory) {
+                    return ArticleFactory.list()
+                }
+            }
+        })
+        .when('/blog/:slug', {
+            controller: 'blogPostController',
+            templateUrl: 'static/partials/single_blog.html',
             resolve: {
                 article: function (ArticleFactory ,$route) {
-                    return ArticleFactory.get($route.current.params.id)
+                    return ArticleFactory.get($route.current.params.slug)
                 }
             }
         })

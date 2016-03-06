@@ -1,0 +1,29 @@
+<div class="article">
+    <section class="korde-cover-image korde-no-decoration" ng-style="{'background-image':'url({$ headerArticle.thumbnail_image_url $})'}">
+        <div class="cover korde-center t-white">
+            <div class="cover-inner">
+                <a class="t-white korde-no-decoration" href="#/blog/{$ headerArticle.slug $}">
+                    <h1 class="font-size-60 korde-very-thick korde-upper">{$ headerArticle.title $}</h1>
+                    <p class="pull-left">{$ headerArticle.author_name $} | {$ headerArticle.created_at | date:
+                        'dd.MM.yyyy' $}
+                    </p>
+                </a>
+
+            </div>
+        </div>
+    </section>
+    <section class="korde-article-content korde-article-content-small p-20-0">
+        <div class="row" ng-if="!articles.length">
+            <small>Uh oh! Her var det tomt:(</small>
+        </div>
+        <div class="row" ng-repeat="article in articles">
+            <a class="korde-no-decoration t-dark" href="#/blog/{$ article.slug $}">
+                <div class="col-sm-12">
+                    <h3>{$ article.title $}</h3>
+                    <small ng-bind-html="article.body_text">{$ article.body_text $}</small>
+                    <small>{$ article.author_name $} | {$ article.created_at | date: 'dd.MM.yyyy' $}</small>
+                </div>
+            </a>
+        </div>
+    </section>
+</div>

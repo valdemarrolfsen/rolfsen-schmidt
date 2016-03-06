@@ -22,9 +22,11 @@
             </div>
         </div>
         <div class="row">
-            <div ng-class="{'col-md-6': !element.width_type, 'col-md-12': element.width_type}" ng-repeat="element in article.elements">
+            <div ng-class="{'col-md-6': !element.width_type, 'col-md-12': element.width_type}"
+                 ng-repeat="element in article.elements">
                 <div ng-if="element.text" ng-bind-html="element.text">{$ element.text $}</div>
-                <div ng-if="element.image_url"><img class="width-fill" ng-src="{$ element.image_url $}" alt="Artikkelbilde"></div>
+                <div ng-if="element.image_url"><img class="width-fill" ng-src="{$ element.image_url $}"
+                                                    alt="Artikkelbilde"></div>
             </div>
         </div>
     </section>

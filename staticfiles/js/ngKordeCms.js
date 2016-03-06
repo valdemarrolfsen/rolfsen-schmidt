@@ -6,56 +6,18 @@ var kordeCms = angular.module("KordeCms", ['ngFileUpload']);
 kordeCms.value('apiUrl', '/cms');
 
 kordeCms.factory('ArticleFactory',
-    ['$http', 'apiUrl', 'Upload', function ($http, apiUrl, Upload) {
+    ['$http', 'apiUrl', function ($http, apiUrl) {
         var endpoint = apiUrl + '/articles';
         return ({
             get: get,
-            list: list,
-            create: create,
-            update: update,
-            addNewElement: addNewElement,
-            destroy: destroy,
-            count: count
+            list: list
         });
-        function get(id) {
-            return $http.get(endpoint + '/' + id)
+        function get(slug) {
+            return $http.get(endpoint + '/' + slug)
         }
 
-        function list(limit) {
-            if (limit){
-                return $http.get(endpoint + '?limit=' +limit)
-            }
+        function list() {
             return $http.get(endpoint)
-
-        }
-
-        function create(article) {
-            return $http.post(endpoint, article)
-        }
-
-        function update(article) {
-            return $http.put(endpoint + '/' + article.id, article)
-        }
-
-        function addNewElement(element, file) {
-            if(angular.isUndefined(file)){
-                return $http.post(endpoint + '/' + element.article + '/elements', element)
-            }else {
-                return Upload.upload({
-                    url: endpoint + '/' + element.article +'/elements',
-                    method: 'POST',
-                    data: element,
-                    file: file
-                });
-            }
-        }
-
-        function destroy(id) {
-            return $http.delete(endpoint + '/' + id)
-        }
-
-        function count() {
-            return $http.get(endpoint + '/count')
         }
     }]);
 
@@ -86,10 +48,6 @@ kordeCms.factory('PageElementFactory',
         }
     }]);
 
-/**
- * Created by rubenschmidt on 24.02.2016.
- */
-
 kordeCms.factory('PageFactory',
     ['$http', 'Upload', 'apiUrl', function ($http, Upload, apiUrl) {
         var endpoint = apiUrl + '/pages';
@@ -97,11 +55,7 @@ kordeCms.factory('PageFactory',
             get: get,
             getChilderen: getChilderen,
             list: list,
-            listElements: listElements,
-            create: create,
-            update: update,
-            updateImageElement: updateImageElement,
-            destroy: destroy
+            listElements: listElements
         });
 
         function get(pageslug) {
@@ -119,104 +73,7 @@ kordeCms.factory('PageFactory',
         function listElements(pageslug) {
             return $http.get(endpoint + '/' + pageslug + '/' + 'elements')
         }
-
-        function create(user) {
-            return $http.post(endpoint, user)
-        }
-
-        function update(pageslug, page) {
-            return $http.put(endpoint + '/' + pageslug, page)
-        }
-
-        function updateImageElement(file, elementId, elementRow, pageId) {
-            return Upload.upload({
-                url: endpoint + '/elements/' + elementId,
-                method: 'PUT',
-                data: {id: elementId, type: 0, row: elementRow, page: pageId},
-                file: file
-            });
-        }
-
-        function destroy(pageslug) {
-            return $http.delete('/pages/' + pageslug)
-        }
     }]);
 
-kordeCms.directive('halloEditor', function () {
-    return {
-        restrict: 'A',
-        require: '?ngModel',
-        link: function (scope, element, attrs, ngModel) {
-            if (!ngModel) {
-                return;
-            }
-
-            element.hallo({
-                plugins: {
-                    'halloformat': {"bold": true, "italic": true, "strikethrough": true, "underline": true},
-                    'halloheadings': [1, 2, 3],
-                    'hallojustify': {},
-                    'hallolists': {},
-                    'halloreundo': {}
-                },
-                toolbar: 'halloToolbarFixed'
-            });
-
-            ngModel.$render = function () {
-                element.html(ngModel.$viewValue || '');
-            };
-            element.on('hallomodified', function () {
-                ngModel.$setViewValue(element.html());
-                scope.$apply();
-            });
-
-        }
-    };
-});
-
-kordeCms.directive('kordeEditable', ['$rootScope', function ($rootScope) {
-    return {
-        restrict: 'A',
-        require: '?ngModel',
-        link: function (scope, element, attrs, ngModel) {
-            if (!ngModel) {
-                return;
-            }
-            if (!scope.editorMode) {
-                return;
-            }
-            if (!attrs.kordeModel) {
-                return;
-            }
-            var kordeModelValue;
-
-            scope.$watch(attrs.kordeModel, function (value) {
-                kordeModelValue = value;
-            });
-
-            element.hallo({
-                plugins: {
-                    'halloformat': {"bold": true, "italic": true, "strikethrough": true, "underline": true},
-                    'halloheadings': [1, 2, 3],
-                    'hallojustify': {},
-                    'hallolists': {},
-                    'halloreundo': {}
-                },
-                toolbar: 'halloToolbarFixed'
-            });
-
-            ngModel.$render = function () {
-                element.html(ngModel.$viewValue || '');
-            };
-            element.on('hallodeactivated', function () {
-                ngModel.$setViewValue(element.html());
-                scope.$apply();
-                //Send the broadcast event
-                $rootScope.$broadcast('rootScope:doneEditing', kordeModelValue);
-            });
-
-        }
-    }
-}]);
 
 
