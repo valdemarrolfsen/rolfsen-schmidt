@@ -35,7 +35,7 @@
       height: 200px; }
       .article .korde-cover-image .cover {
         min-height: 200px;
-        xline-height: 201px; } }
+        line-height: 201px; } }
 .article .korde-article-content {
   padding: 50px 100px; }
   .article .korde-article-content .article-info {
