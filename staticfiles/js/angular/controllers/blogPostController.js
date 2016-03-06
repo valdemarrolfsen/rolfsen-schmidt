@@ -16,6 +16,7 @@ main.controller('blogPostController', ['$scope', '$routeParams', 'ArticleFactory
                 name: $scope.article.title,
                 link: 'http://www.korde.no/blog/' + $scope.article.slug,
                 description: $scope.article.body_text,
+                picture: $scope.article.thumbnail_image_url,
                 message: ''
             });
     }
