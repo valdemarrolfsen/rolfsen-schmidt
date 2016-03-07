@@ -39,7 +39,8 @@
 .article .korde-article-content {
   padding: 50px 100px; }
   .article .korde-article-content .article-info {
-    list-style: none; }
+    list-style: none;
+    padding: 0; }
   @media (max-width: 768px) {
     .article .korde-article-content {
       padding: 20px; } }
