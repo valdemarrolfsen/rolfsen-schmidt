@@ -21,7 +21,7 @@ main.config(function ($routeProvider) {
         .when('/',
             {
                 controller: 'homeController',
-                templateUrl: 'static/partials/home.html'
+                templateUrl: 'static/partials/home_new.html'
             })
         /*.when('/about', {
             templateUrl: 'static/partials/about.html'

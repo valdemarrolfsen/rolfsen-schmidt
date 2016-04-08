@@ -1,0 +1,3 @@
+[submodule "front/static/korde-styling"]
+	path = front/static/korde-styling
+	url = git@github.com:valdemarrolfsen/korde-styling.git
