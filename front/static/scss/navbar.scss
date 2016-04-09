@@ -1,165 +1,177 @@
 @import 'variables';
 
 #navbar {
-	.navbar {
-	  margin-bottom: 0;
-	}
+  .navbar {
+    margin-bottom: 0;
+  }
 
-	.navbar-default {
-		background: none;
-	    border: 0;
-	    border-radius: 0;
-	    height: 90px;
-	    -moz-transition: all 200ms ease;
-	    -webkit-transition: all 200ms ease;
-	    -o-transition: all 200ms ease;
-	    transition: all 200ms ease;
+  .navbar-default {
+    background: none;
+    border: 0;
+    border-radius: 0;
+    height: 90px;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 
-	    max-height: 500px;
+    max-height: 500px;
 
-	    display: block;
-	    margin-left: auto;
-	    margin-right: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 
-		box-shadow: none;
+    box-shadow: none;
 
-	    @media (max-width: $smallMediaSize) {
-	      width: 100%;
-	      height: auto;
-	    }
+    @media (max-width: $smallMediaSize) {
+      width: 100%;
+      height: auto;
+    }
 
-	    .navbar-brand {
-	        margin-left: 20px;
-	        padding-top: 23px;
+    .navbar-brand {
+      margin-left: 20px;
+      padding-top: 23px;
 
-	        h5 {
-				font-size: 30px;
-				font-weight: 100;
-				color: #fff;
-				text-align: center;
-	        }
+      h5 {
+        font-size: 30px;
+        font-weight: 100;
+        color: #fff;
+        text-align: center;
+      }
 
-			img {
-				width: 180px;
-			}
+      img {
+        width: 180px;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        -webkit-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+      }
 
-	        @media (max-width: $mediumMediaSize) {
-	          width: 100px;
-	          margin-left: 0;
-	          padding-top: 10px;
+      @media (max-width: $mediumMediaSize) {
+        width: 100px;
+        margin-left: 0;
+        padding-top: 10px;
 
-	          img {
-	            width: 100px;
-	          }
-	          h5 {
-	            font-size: 15px;
-	          }
-	        }
-	    }
+        img {
+          width: 100px;
+        }
+        h5 {
+          font-size: 15px;
+        }
+      }
+    }
 
-	    .navbar-nav {
-	        > li {
-	            > a {
-					font-weight: 100;
+    .navbar-nav {
+      > li {
+        > a {
+          font-weight: 100;
 
-					line-height: 80px;
+          line-height: 80px;
 
-					height: 80px;
-					padding-top:10px;
-					padding-right: 10px;
-					color: #fff;
-					letter-spacing: 2px;
+          height: 80px;
+          padding-top: 10px;
+          padding-right: 10px;
+          color: #fff;
+          letter-spacing: 2px;
 
-					text-shadow: none;
+          text-shadow: none;
 
-					&:hover, &:focus {
-						color: #F5A623;
-					}
+          &:hover, &:focus {
+            color: #F5A623;
+          }
 
-					@media (max-width: $smallMediaSize) {
-						padding-top:10px;
-						padding-bottom: 10px;
-					}
-	            }
-	        }
+          @media (max-width: $smallMediaSize) {
+            padding-top: 10px;
+            padding-bottom: 10px;
+          }
+        }
+      }
 
-	        .active {
-	            > a, > a:hover, > a:focus {
-	                color: $colHover;
-	                background: $bgHighlight;
+      .active {
+        > a, > a:hover, > a:focus {
+          color: $colHover;
+          background: $bgHighlight;
 
-	                font-weight: 600;
-	            }
-	        }
+          font-weight: 600;
+        }
+      }
 
-	        .open {
-	            > a, > a:hover, > a:focus {
-	                color: $colHover;
-	                background: none;
-	                box-shadow: none;
+      .open {
+        > a, > a:hover, > a:focus {
+          color: $colHover;
+          background: none;
+          box-shadow: none;
 
-	                .caret {
-	                    border-top-color: $colHover;
-	                    border-bottom-color: $colHover;
-	                }
-	            }
-	        }
+          .caret {
+            border-top-color: $colHover;
+            border-bottom-color: $colHover;
+          }
+        }
+      }
 
-	        > .dropdown {
-	            > a {
-	                .caret {
-	                    border-top-color: $colDefault;
-	                    border-bottom-color: $colDefault;
-	                }
+      > .dropdown {
+        > a {
+          .caret {
+            border-top-color: $colDefault;
+            border-bottom-color: $colDefault;
+          }
 
-	                &:hover, &:focus {
-	                    .caret {
-	                        border-top-color: $colHover;
-	                        border-bottom-color: $colHover;
-	                    }
-	                }
-	            }
-	        }
-	    }
+          &:hover, &:focus {
+            .caret {
+              border-top-color: $colHover;
+              border-bottom-color: $colHover;
+            }
+          }
+        }
+      }
+    }
 
-	    .navbar-right {
-	      margin-right: 60px;
+    .navbar-right {
+      margin-right: 60px;
+      li {
+        a {
+          -moz-transition: all 0.5s ease;
+          -o-transition: all 0.5s ease;
+          -webkit-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+        }
+      }
 
-	      @media (max-width: $mediumMediaSize) {
-	        li{
-	          a{
-	            font-size: 14px;
-	          }
-	        }
-	      }
-	    }
+      @media (max-width: $mediumMediaSize) {
+        li {
+          a {
+            font-size: 14px;
+          }
+        }
+      }
+    }
 
-	    .navbar-toggle {
-	        border-color: $bgHighlight;
-	        &:hover, &:focus {
-	            background: $bgHighlight;
-	        }
-	        .icon-bar {
-	            background: #fff;
-	        }
-	    }
-	}
+    .navbar-toggle {
+      border-color: $bgHighlight;
+      &:hover, &:focus {
+        background: $bgHighlight;
+      }
+      .icon-bar {
+        background: #fff;
+      }
+    }
+  }
 
-	.with-background {
-		background: #222;
-	}
+  .with-background {
+    background: #222;
+  }
 
-	@media (max-width: $smallMediaSize) {
-	    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-	        color: $colDefault;
-	        &:hover, &:focus {
-	            color: $colHover;
-	            background: $bgHighlight;
-	        }
-	    }
+  @media (max-width: $smallMediaSize) {
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+      color: $colDefault;
+      &:hover, &:focus {
+        color: $colHover;
+        background: $bgHighlight;
+      }
+    }
 
-		.navbar-collapse {
-			background: #222;
-		}
-	}
+    .navbar-collapse {
+      background: #222;
+    }
+  }
 }

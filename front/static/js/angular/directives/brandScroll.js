@@ -4,17 +4,16 @@
 main.directive("brandScroll", function ($window) {
     return function(scope, element, attrs) {
         angular.element($window).bind("scroll", function() {
-            var divHeight = 300;
-            var startFraction = 1/6;
-            var startHeight = divHeight*startFraction;
-            var imageWidth = 180-(this.pageYOffset-startHeight);
+            var divHeight = 50;
+            var startImagePadding = 10;
+            var endImagePadding = 0;
 
-            if (this.pageYOffset >= startHeight && this.pageYOffset < divHeight && imageWidth > 120) {
-                element.css('width', 180-(this.pageYOffset-startHeight) + 'px');
-            } else if (imageWidth <= 120) {
+            if (this.pageYOffset >= divHeight) {
                 element.css('width', '120px');
+                element.css('padding-top', endImagePadding + 'px');
             } else {
                 element.css('width', '180px');
+                element.css('padding-top',startImagePadding+ 'px');
             }
         });
     };
