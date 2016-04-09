@@ -4,9 +4,7 @@
 
 -----------------------------------------*/
 /*----------------------------------------
-
   KORDE - VARIABLES
-
 -----------------------------------------*/
 /*----------------------------------------
 
@@ -27,6 +25,12 @@
 .border-t-0, .border-t-1, .border-t-2, .border-t-3, .border-t-4, .border-t-5, .border-t-6, .border-t-7, .border-t-8, .border-t-9 {
   border-top-style: solid; }
 
+.border-r-0, .border-r-1, .border-r-2, .border-r-3, .border-r-4, .border-r-5, .border-r-6, .border-r-7, .border-r-8, .border-r-9 {
+  border-right-style: solid; }
+
+.border-l-0, .border-l-1, .border-l-2, .border-l-3, .border-l-4, .border-l-5, .border-l-6, .border-l-7, .border-l-8, .border-l-9 {
+  border-left-style: solid; }
+
 .korde-editable, .korde-editable .edit-button {
   -webkit-transition: all 500ms ease;
   -moz-transition: all 500ms ease;
@@ -44,7 +48,7 @@
 .button-sm, .button-md, .button-lg {
   cursor: pointer; }
 
-.cover-light, .cover-stable, .cover-stable_dark, .cover-positive, .cover-accept, .cover-decline, .cover-action, .cover-warning, .cover-dark {
+.cover-warm, .cover-light, .cover-stable, .cover-stable_dark, .cover-positive, .cover-accept, .cover-decline, .cover-action, .cover-warning, .cover-dark {
   position: absolute;
   top: 0;
   left: 0;
@@ -71,7 +75,7 @@
   -o-transition: all 200ms ease;
   transition: all 200ms ease; }
 
-/*----------------------------------------
+  /*----------------------------------------
 
   KORDE - BUTTONS
 
@@ -112,16 +116,64 @@
     .button-lg {
       width: 100%; } }
 
+.button-warm {
+  background: #EAE0DB;
+  color: #000; }
+  .button-warm:hover {
+    background: #fdfcfb; }
+  .button-warm:active {
+    background: #e1d2cb; }
+
+.button-grad-warm {
+  color: #000;
+  background: #EAE0DB;
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#EAE0DB, #d7c4bb);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#EAE0DB, #d7c4bb);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#EAE0DB, #d7c4bb);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#EAE0DB, #d7c4bb);
+  /* Standard syntax */ }
+  .button-grad-warm:active {
+    background: #d7c4bb;
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#d7c4bb, #EAE0DB);
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#d7c4bb, #EAE0DB);
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#d7c4bb, #EAE0DB);
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#d7c4bb, #EAE0DB);
+    /* Standard syntax */ }
+
+.button-border-warm {
+  background: none;
+  border: 1px solid #EAE0DB;
+  color: #EAE0DB;
+  -webkit-transition: background-color 200ms ease;
+  -moz-transition: background-color 200ms ease;
+  -ms-transition: background-color 200ms ease;
+  -o-transition: background-color 200ms ease;
+  transition: background-color 200ms ease; }
+  .button-border-warm:hover {
+    background: #EAE0DB;
+    color: #000; }
+  .button-border-warm:active {
+    background: #e1d2cb;
+    border-color: #e1d2cb; }
+
 .button-light {
   background: #fff;
-  color: #2d2533; }
+  color: #000; }
   .button-light:hover {
     background: white; }
   .button-light:active {
     background: #f2f2f2; }
 
 .button-grad-light {
-  color: #2d2533;
+  color: #000;
   background: #fff;
   /* For browsers that do not support gradients */
   background: -webkit-linear-gradient(#fff, #e6e6e6);
@@ -155,106 +207,106 @@
   transition: background-color 200ms ease; }
   .button-border-light:hover {
     background: #fff;
-    color: #2d2533; }
+    color: #000; }
   .button-border-light:active {
     background: #f2f2f2;
     border-color: #f2f2f2; }
 
 .button-stable {
-  background: #f8f8f8;
-  color: #2d2533; }
+  background: #7e7e85;
+  color: #000; }
   .button-stable:hover {
-    background: white; }
+    background: #98989e; }
   .button-stable:active {
-    background: #ebebeb; }
+    background: #717178; }
 
 .button-grad-stable {
-  color: #2d2533;
-  background: #f8f8f8;
+  color: #000;
+  background: #7e7e85;
   /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(#f8f8f8, #dfdfdf);
+  background: -webkit-linear-gradient(#7e7e85, #65656b);
   /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#f8f8f8, #dfdfdf);
+  background: -o-linear-gradient(#7e7e85, #65656b);
   /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#f8f8f8, #dfdfdf);
+  background: -moz-linear-gradient(#7e7e85, #65656b);
   /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#f8f8f8, #dfdfdf);
+  background: linear-gradient(#7e7e85, #65656b);
   /* Standard syntax */ }
   .button-grad-stable:active {
-    background: #dfdfdf;
+    background: #65656b;
     /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#dfdfdf, #f8f8f8);
+    background: -webkit-linear-gradient(#65656b, #7e7e85);
     /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#dfdfdf, #f8f8f8);
+    background: -o-linear-gradient(#65656b, #7e7e85);
     /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#dfdfdf, #f8f8f8);
+    background: -moz-linear-gradient(#65656b, #7e7e85);
     /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#dfdfdf, #f8f8f8);
+    background: linear-gradient(#65656b, #7e7e85);
     /* Standard syntax */ }
 
 .button-border-stable {
   background: none;
-  border: 1px solid #f8f8f8;
-  color: #f8f8f8;
+  border: 1px solid #7e7e85;
+  color: #7e7e85;
   -webkit-transition: background-color 200ms ease;
   -moz-transition: background-color 200ms ease;
   -ms-transition: background-color 200ms ease;
   -o-transition: background-color 200ms ease;
   transition: background-color 200ms ease; }
   .button-border-stable:hover {
-    background: #f8f8f8;
-    color: #2d2533; }
+    background: #7e7e85;
+    color: #000; }
   .button-border-stable:active {
-    background: #ebebeb;
-    border-color: #ebebeb; }
+    background: #717178;
+    border-color: #717178; }
 
 .button-stable_dark {
-  background: #888;
+  background: #22222F;
   color: #fff; }
   .button-stable_dark:hover {
-    background: #a2a2a2; }
+    background: #37374d; }
   .button-stable_dark:active {
-    background: #7b7b7b; }
+    background: #171720; }
 
 .button-grad-stable_dark {
   color: #fff;
-  background: #888;
+  background: #22222F;
   /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(#888, #6f6f6f);
+  background: -webkit-linear-gradient(#22222F, #0d0d11);
   /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#888, #6f6f6f);
+  background: -o-linear-gradient(#22222F, #0d0d11);
   /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#888, #6f6f6f);
+  background: -moz-linear-gradient(#22222F, #0d0d11);
   /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#888, #6f6f6f);
+  background: linear-gradient(#22222F, #0d0d11);
   /* Standard syntax */ }
   .button-grad-stable_dark:active {
-    background: #6f6f6f;
+    background: #0d0d11;
     /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#6f6f6f, #888);
+    background: -webkit-linear-gradient(#0d0d11, #22222F);
     /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#6f6f6f, #888);
+    background: -o-linear-gradient(#0d0d11, #22222F);
     /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#6f6f6f, #888);
+    background: -moz-linear-gradient(#0d0d11, #22222F);
     /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#6f6f6f, #888);
+    background: linear-gradient(#0d0d11, #22222F);
     /* Standard syntax */ }
 
 .button-border-stable_dark {
   background: none;
-  border: 1px solid #888;
-  color: #888;
+  border: 1px solid #22222F;
+  color: #22222F;
   -webkit-transition: background-color 200ms ease;
   -moz-transition: background-color 200ms ease;
   -ms-transition: background-color 200ms ease;
   -o-transition: background-color 200ms ease;
   transition: background-color 200ms ease; }
   .button-border-stable_dark:hover {
-    background: #888;
+    background: #22222F;
     color: #fff; }
   .button-border-stable_dark:active {
-    background: #7b7b7b;
-    border-color: #7b7b7b; }
+    background: #171720;
+    border-color: #171720; }
 
 .button-positive {
   background: #0098D8;
@@ -401,52 +453,52 @@
     border-color: #d53625; }
 
 .button-action {
-  background: #b54d50;
+  background: #F5A623;
   color: #fff; }
   .button-action:hover {
-    background: #c47173; }
+    background: #f7ba54; }
   .button-action:active {
-    background: #a44447; }
+    background: #f39c0b; }
 
 .button-grad-action {
   color: #fff;
-  background: #b54d50;
+  background: #F5A623;
   /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(#b54d50, #923d3f);
+  background: -webkit-linear-gradient(#F5A623, #db8c0a);
   /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#b54d50, #923d3f);
+  background: -o-linear-gradient(#F5A623, #db8c0a);
   /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#b54d50, #923d3f);
+  background: -moz-linear-gradient(#F5A623, #db8c0a);
   /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#b54d50, #923d3f);
+  background: linear-gradient(#F5A623, #db8c0a);
   /* Standard syntax */ }
   .button-grad-action:active {
-    background: #923d3f;
+    background: #db8c0a;
     /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#923d3f, #b54d50);
+    background: -webkit-linear-gradient(#db8c0a, #F5A623);
     /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#923d3f, #b54d50);
+    background: -o-linear-gradient(#db8c0a, #F5A623);
     /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#923d3f, #b54d50);
+    background: -moz-linear-gradient(#db8c0a, #F5A623);
     /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#923d3f, #b54d50);
+    background: linear-gradient(#db8c0a, #F5A623);
     /* Standard syntax */ }
 
 .button-border-action {
   background: none;
-  border: 1px solid #b54d50;
-  color: #b54d50;
+  border: 1px solid #F5A623;
+  color: #F5A623;
   -webkit-transition: background-color 200ms ease;
   -moz-transition: background-color 200ms ease;
   -ms-transition: background-color 200ms ease;
   -o-transition: background-color 200ms ease;
   transition: background-color 200ms ease; }
   .button-border-action:hover {
-    background: #b54d50;
+    background: #F5A623;
     color: #fff; }
   .button-border-action:active {
-    background: #a44447;
-    border-color: #a44447; }
+    background: #f39c0b;
+    border-color: #f39c0b; }
 
 .button-warning {
   background: #558A86;
@@ -497,52 +549,52 @@
     border-color: #4b7a77; }
 
 .button-dark {
-  background: #2d2533;
+  background: #000;
   color: #fff; }
   .button-dark:hover {
-    background: #473a51; }
+    background: #1a1a1a; }
   .button-dark:active {
-    background: #201a24; }
+    background: black; }
 
 .button-grad-dark {
   color: #fff;
-  background: #2d2533;
+  background: #000;
   /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(#2d2533, #131015);
+  background: -webkit-linear-gradient(#000, black);
   /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#2d2533, #131015);
+  background: -o-linear-gradient(#000, black);
   /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#2d2533, #131015);
+  background: -moz-linear-gradient(#000, black);
   /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#2d2533, #131015);
+  background: linear-gradient(#000, black);
   /* Standard syntax */ }
   .button-grad-dark:active {
-    background: #131015;
+    background: black;
     /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#131015, #2d2533);
+    background: -webkit-linear-gradient(black, #000);
     /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#131015, #2d2533);
+    background: -o-linear-gradient(black, #000);
     /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#131015, #2d2533);
+    background: -moz-linear-gradient(black, #000);
     /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#131015, #2d2533);
+    background: linear-gradient(black, #000);
     /* Standard syntax */ }
 
 .button-border-dark {
   background: none;
-  border: 1px solid #2d2533;
-  color: #2d2533;
+  border: 1px solid #000;
+  color: #000;
   -webkit-transition: background-color 200ms ease;
   -moz-transition: background-color 200ms ease;
   -ms-transition: background-color 200ms ease;
   -o-transition: background-color 200ms ease;
   transition: background-color 200ms ease; }
   .button-border-dark:hover {
-    background: #2d2533;
+    background: #000;
     color: #fff; }
   .button-border-dark:active {
-    background: #201a24;
-    border-color: #201a24; }
+    background: black;
+    border-color: black; }
 
 .button-rounded {
   border-radius: 1337px; }
@@ -555,9 +607,7 @@ Created by Valdemar Rolfsen 2016
 
 -------------------- */
 /*----------------------------------------
-
   KORDE - VARIABLES
-
 -----------------------------------------*/
 @media (max-width: 768px) {
   h1 {
@@ -959,7 +1009,7 @@ p.big {
   color: #fff; }
 
 .t-dark {
-  color: #2d2533; }
+  color: #000; }
 
 .t-upper {
   text-transform: uppercase; }
@@ -17675,6 +17725,21 @@ Created by Valdemar Rolfsen 2016
 .w-fill {
   width: 100%; }
 
+.h-screen-fill {
+  height: 100vh; }
+
+.color-warm {
+  color: #EAE0DB; }
+
+.bg-warm {
+  background: #EAE0DB; }
+
+.border-warm {
+  border-color: #EAE0DB; }
+
+.cover-warm {
+  background: #EAE0DB; }
+
 .color-light {
   color: #fff; }
 
@@ -17688,28 +17753,28 @@ Created by Valdemar Rolfsen 2016
   background: #fff; }
 
 .color-stable {
-  color: #f8f8f8; }
+  color: #7e7e85; }
 
 .bg-stable {
-  background: #f8f8f8; }
+  background: #7e7e85; }
 
 .border-stable {
-  border-color: #f8f8f8; }
+  border-color: #7e7e85; }
 
 .cover-stable {
-  background: #f8f8f8; }
+  background: #7e7e85; }
 
 .color-stable_dark {
-  color: #888; }
+  color: #22222F; }
 
 .bg-stable_dark {
-  background: #888; }
+  background: #22222F; }
 
 .border-stable_dark {
-  border-color: #888; }
+  border-color: #22222F; }
 
 .cover-stable_dark {
-  background: #888; }
+  background: #22222F; }
 
 .color-positive {
   color: #0098D8; }
@@ -17748,16 +17813,16 @@ Created by Valdemar Rolfsen 2016
   background: #dc4738; }
 
 .color-action {
-  color: #b54d50; }
+  color: #F5A623; }
 
 .bg-action {
-  background: #b54d50; }
+  background: #F5A623; }
 
 .border-action {
-  border-color: #b54d50; }
+  border-color: #F5A623; }
 
 .cover-action {
-  background: #b54d50; }
+  background: #F5A623; }
 
 .color-warning {
   color: #558A86; }
@@ -17772,16 +17837,16 @@ Created by Valdemar Rolfsen 2016
   background: #558A86; }
 
 .color-dark {
-  color: #2d2533; }
+  color: #000; }
 
 .bg-dark {
-  background: #2d2533; }
+  background: #000; }
 
 .border-dark {
-  border-color: #2d2533; }
+  border-color: #000; }
 
 .cover-dark {
-  background: #2d2533; }
+  background: #000; }
 
 .cover-content {
   position: relative;
@@ -17796,6 +17861,12 @@ Created by Valdemar Rolfsen 2016
 .border-t-0 {
   border-top-width: 0px; }
 
+.border-r-0 {
+  border-right-width: 0px; }
+
+.border-l-0 {
+  border-left-width: 0px; }
+
 .border-1 {
   border-width: 1px; }
 
@@ -17804,6 +17875,12 @@ Created by Valdemar Rolfsen 2016
 
 .border-t-1 {
   border-top-width: 1px; }
+
+.border-r-1 {
+  border-right-width: 1px; }
+
+.border-l-1 {
+  border-left-width: 1px; }
 
 .border-2 {
   border-width: 2px; }
@@ -17814,6 +17891,12 @@ Created by Valdemar Rolfsen 2016
 .border-t-2 {
   border-top-width: 2px; }
 
+.border-r-2 {
+  border-right-width: 2px; }
+
+.border-l-2 {
+  border-left-width: 2px; }
+
 .border-3 {
   border-width: 3px; }
 
@@ -17822,6 +17905,12 @@ Created by Valdemar Rolfsen 2016
 
 .border-t-3 {
   border-top-width: 3px; }
+
+.border-r-3 {
+  border-right-width: 3px; }
+
+.border-l-3 {
+  border-left-width: 3px; }
 
 .border-4 {
   border-width: 4px; }
@@ -17832,6 +17921,12 @@ Created by Valdemar Rolfsen 2016
 .border-t-4 {
   border-top-width: 4px; }
 
+.border-r-4 {
+  border-right-width: 4px; }
+
+.border-l-4 {
+  border-left-width: 4px; }
+
 .border-5 {
   border-width: 5px; }
 
@@ -17840,6 +17935,12 @@ Created by Valdemar Rolfsen 2016
 
 .border-t-5 {
   border-top-width: 5px; }
+
+.border-r-5 {
+  border-right-width: 5px; }
+
+.border-l-5 {
+  border-left-width: 5px; }
 
 .border-6 {
   border-width: 6px; }
@@ -17850,6 +17951,12 @@ Created by Valdemar Rolfsen 2016
 .border-t-6 {
   border-top-width: 6px; }
 
+.border-r-6 {
+  border-right-width: 6px; }
+
+.border-l-6 {
+  border-left-width: 6px; }
+
 .border-7 {
   border-width: 7px; }
 
@@ -17858,6 +17965,12 @@ Created by Valdemar Rolfsen 2016
 
 .border-t-7 {
   border-top-width: 7px; }
+
+.border-r-7 {
+  border-right-width: 7px; }
+
+.border-l-7 {
+  border-left-width: 7px; }
 
 .border-8 {
   border-width: 8px; }
@@ -17868,6 +17981,12 @@ Created by Valdemar Rolfsen 2016
 .border-t-8 {
   border-top-width: 8px; }
 
+.border-r-8 {
+  border-right-width: 8px; }
+
+.border-l-8 {
+  border-left-width: 8px; }
+
 .border-9 {
   border-width: 9px; }
 
@@ -17876,6 +17995,12 @@ Created by Valdemar Rolfsen 2016
 
 .border-t-9 {
   border-top-width: 9px; }
+
+.border-r-9 {
+  border-right-width: 9px; }
+
+.border-l-9 {
+  border-left-width: 9px; }
 
 .is-relative {
   position: relative; }
@@ -17914,6 +18039,36 @@ Created by Valdemar Rolfsen 2016
 .overflow-scroll {
   overflow-y: scroll; }
 
+.on-hover-color-warm:hover {
+  color: #EAE0DB; }
+
+.on-hover-color-light:hover {
+  color: #fff; }
+
+.on-hover-color-stable:hover {
+  color: #7e7e85; }
+
+.on-hover-color-stable_dark:hover {
+  color: #22222F; }
+
+.on-hover-color-positive:hover {
+  color: #0098D8; }
+
+.on-hover-color-accept:hover {
+  color: #1bbc9b; }
+
+.on-hover-color-decline:hover {
+  color: #dc4738; }
+
+.on-hover-color-action:hover {
+  color: #F5A623; }
+
+.on-hover-color-warning:hover {
+  color: #558A86; }
+
+.on-hover-color-dark:hover {
+  color: #000; }
+
 /* --------------------
 
 KORDE COMPONENTS
@@ -17948,12 +18103,12 @@ Created by Valdemar Rolfsen 2016
     height: 30px;
     line-height: 30px;
     border-radius: 100%;
-    border: 1px solid #888;
-    background: #f8f8f8; }
+    border: 1px solid #22222F;
+    background: #7e7e85; }
     .korde-editable .edit-button:hover {
-      background: #ebebeb; }
+      background: #717178; }
     .korde-editable .edit-button:active {
-      background: #dfdfdf; }
+      background: #65656b; }
 
 /*----------------------------------------
 
@@ -17992,7 +18147,7 @@ Created by Valdemar Rolfsen 2016
       line-height: 60px;
       opacity: 0.6; }
     .nav-side-sm .nav-item:hover {
-      background: #473a51; }
+      background: #1a1a1a; }
   .nav-side-sm .active span {
     opacity: 1; }
 
@@ -18005,7 +18160,8 @@ Created by Valdemar Rolfsen 2016
 
 -----------------------------------------*/
 .layout-row {
-  -webkit-flex-flow: row wrap; }
+  -webkit-flex-flow: row wrap;
+  width: 100%; }
 
 .layout-col {
   -webkit-flex-flow: column wrap; }
@@ -18207,15 +18363,21 @@ Created by Valdemar Rolfsen 2016
   KORDE - FORMS
 
 -----------------------------------------*/
-.plain-input, .plain-select {
+.plain-input, .plain-select, .plain-textarea {
   -webkit-appearance: none;
   width: 100%;
-  height: 40px;
-  padding-left: 15px;
   border: 0;
   border-radius: 0; }
-  .plain-input:focus, .plain-select:focus {
+  .plain-input:focus, .plain-select:focus, .plain-textarea:focus {
     outline: none; }
+
+.plain-input, .plain-select {
+  height: 40px;
+  padding-left: 15px; }
+
+.plain-textarea {
+  padding: 15px;
+  resize: none; }
 
 .hidden-input {
   background: none;
@@ -18226,10 +18388,48 @@ Created by Valdemar Rolfsen 2016
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
     outline: none; }
 
+:not(#foo) .styled-checkbox {
+  position: absolute;
+  opacity: 0; }
+  :not(#foo) .styled-checkbox + label {
+    position: relative;
+    cursor: pointer;
+    padding: 0; }
+  :not(#foo) .styled-checkbox + label:before {
+    content: '';
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: text-top;
+    background: #A9A5A5;
+    width: 20px;
+    height: 20px;
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease; }
+  :not(#foo) .styled-checkbox:hover + label:before {
+    background: #f35429;
+    box-shadow: 0 0 0 6px rgba(0, 0, 0, 0.12); }
+  :not(#foo) .styled-checkbox:checked + label:before {
+    background: #f35429; }
+  :not(#foo) .styled-checkbox.disabled + label, :not(#foo) .styled-checkbox[disabled] + label {
+    color: #b8b8b8; }
+  :not(#foo) .styled-checkbox.disabled + label:before, :not(#foo) .styled-checkbox[disabled] + label:before {
+    box-shadow: none;
+    background: #ddd; }
+  :not(#foo) .styled-checkbox:checked + label:after {
+    content: '\2713';
+    position: absolute;
+    top: 0;
+    left: 5px;
+    line-height: 20px;
+    color: white; }
+
 body {
   margin: 0;
   min-height: 100vh;
-  font-family: "Lato", sans-serif;
+  font-family: "Catamaran", sans-serif;
   font-size: 14px; }
 
 button, input, select, div {

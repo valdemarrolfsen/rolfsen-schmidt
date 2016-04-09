@@ -2211,36 +2211,6 @@ Created by Valdemar Rolfsen 2016
 .w-fill {
   width: 100%; }
 
-.bg-light {
-  background: #fff; }
-
-.bg-stable {
-  background: #f8f8f8; }
-
-.bg-stable-dark {
-  background: #BBBBBB; }
-
-.bg-positive {
-  background: #387ef5; }
-
-.bg-calm {
-  background: #11c1f3; }
-
-.bg-balanced {
-  background: #33cd5f; }
-
-.bg-energized {
-  background: #ffc900; }
-
-.bg-assertive {
-  background: #ef473a; }
-
-.bg-royal {
-  background: #241d4e; }
-
-.bg-dark {
-  background: #222; }
-
 .bg-none {
   background: none; }
 
@@ -2253,36 +2223,6 @@ Created by Valdemar Rolfsen 2016
   background-repeat: no-repeat;
   background-size: 46% auto;
   background-position: left center; }
-
-.color-light {
-  color: #fff; }
-
-.color-stable {
-  color: #f8f8f8; }
-
-.color-stable-dark {
-  color: #BBBBBB; }
-
-.color-positive {
-  color: #387ef5; }
-
-.color-calm {
-  color: #11c1f3; }
-
-.color-balanced {
-  color: #33cd5f; }
-
-.color-energized {
-  color: #ffc900; }
-
-.color-assertive {
-  color: #ef473a; }
-
-.color-royal {
-  color: #241d4e; }
-
-.color-dark {
-  color: #222; }
 
 .border-light {
   border-color: #fff; }

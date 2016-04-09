@@ -27,7 +27,7 @@
 
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet'
               type='text/css'>
-        <link href='https://fonts.googleapis.com/css?family=Raleway:400,300italic,300,200italic,200,100italic,100,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic'
+        <link href='https://fonts.googleapis.com/css?family=Catamaran:100, 300, 400, 500, 600, 700, 800, 900'
               rel='stylesheet' type='text/css'>
 
         <!-- Latest compiled and minified CSS -->
@@ -87,34 +87,49 @@
 
 <ng-view autoscroll="true"></ng-view>
 
-<footer class="copyright">
-    <div class="container">
-        <div class="row text-center">
-            <div class="col-md-4">
-            </div>
-            <div class="col-md-4">
-                <span><h6>Copyright &copy; <strong>Korde</strong> 2016</h6></span>
-            </div>
+<footer class="bg-dark">
+    <div class="layout-row t-center p-l-20-100 color-stable">
+        <div class="c-m-3">
+            <p><a class="color-stable on-hover-color-action" href="#/case_studies">Arbeid</a></p>
+        </div>
+        <div class="c-m-3">
+            <p><a class="color-stable on-hover-color-action" href="#/blog">Blogg</a></p>
+        </div>
+        <div class="c-m-3">
+            <p><a class="color-stable on-hover-color-action" href="#/jobs">Jobb hos oss</a></p>
+        </div>
+        <div class="c-m-3">
+            <p><a class="color-stable on-hover-color-action" href="#/contact">Kontakt oss</a></p>
+        </div>
+
+    </div>
+
+    <div class="layout-row color-stable">
+        <div class="c-m-12 t-center">
+            <span><h6>Copyright &copy; <strong>Korde</strong> 2016</h6></span>
         </div>
     </div>
 </footer>
 
 <script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '1092232697485924',
-      xfbml      : true,
-      version    : 'v2.5'
-    });
-  };
+    window.fbAsyncInit = function () {
+        FB.init({
+            appId: '1092232697485924',
+            xfbml: true,
+            version: 'v2.5'
+        });
+    };
 
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {
+            return;
+        }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
 </script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>

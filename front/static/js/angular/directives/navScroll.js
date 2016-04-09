@@ -4,7 +4,7 @@
 main.directive("navScroll", function ($window) {
     return function(scope, element, attrs) {
         angular.element($window).bind("scroll", function() {
-            var divHeight = $('.intro-cover').first().height() > 0 ? $('.intro-cover').first().height() : $('.korde-cover-image').first().height();
+            var divHeight = 500;
             var startFraction = 1/5;
             var startHeight = divHeight*startFraction;
 
