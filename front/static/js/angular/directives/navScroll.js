@@ -8,7 +8,7 @@ main.directive("navScroll", function ($window) {
             var startNavHeight = 120;
 
             if (this.pageYOffset >= divHeight) {
-                element.css('background', 'rgba(0, 0, 0, 0.8)');
+                element.css('background', 'rgba(0, 0, 0, 0.9)');
                 element.css('height', '70px')
             } else {
                 element.css('background', 'rgba(0, 0, 0, 0)');
