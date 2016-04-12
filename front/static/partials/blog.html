@@ -1,17 +1,41 @@
 <div class="article">
-    <section class="korde-cover-image korde-no-decoration" ng-style="{'background-image':'url({$ headerArticle.thumbnail_image_url $})'}">
-        <div class="cover korde-center t-white">
-            <div class="cover-inner">
+    <div class="layout-row layout-center has-image is-relative"
+         ng-style="{'background-image':'url({$ headerArticle.thumbnail_image_url $})'}">
+        <div class="cover-3 cover-dark"></div>
+        <div class="cover-content">
+            <div class="c-m-12 p-l-150-0 t-center">
                 <a class="t-white korde-no-decoration" href="#/blog/{$ headerArticle.slug $}">
                     <h1 class="font-size-60 korde-very-thick korde-upper">{$ headerArticle.title $}</h1>
                     <p class="pull-left">{$ headerArticle.author_name $} | {$ headerArticle.created_at | date:
                         'dd.MM.yyyy' $}
                     </p>
                 </a>
-
             </div>
         </div>
-    </section>
+    </div>
+    <div class="layout-row" ng-repeat="article in articles">
+        <div class="c-m-6 p-l-100-100 bg-stable_dark" ng-if="!($index%2)">
+            <a class="korde-no-decoration color-light" href="#/blog/{$ article.slug $}">
+                <div class="col-sm-12">
+                    <h3>{$ article.title $}</h3>
+                    <span ng-bind-html="article.body_text">{$ article.body_text $}</span>
+                    <small>{$ article.author_name $} | {$ article.created_at | date: 'dd.MM.yyyy' $}</small>
+                </div>
+            </a>
+        </div>
+        <div class="c-m-6 p-l-100-100 has-image is-relative" ng-style="{'background-image':'url({$ article.thumbnail_image_url $})'}">
+            <div class="cover-3 cover-dark"></div>
+        </div>
+        <div class="c-m-6 p-l-100-100 bg-stable_dark" ng-if="($index%2)">
+            <a class="korde-no-decoration color-light" href="#/blog/{$ article.slug $}">
+                <div class="col-sm-12">
+                    <h3>{$ article.title $}</h3>
+                    <span ng-bind-html="article.body_text">{$ article.body_text $}</span>
+                    <small>{$ article.author_name $} | {$ article.created_at | date: 'dd.MM.yyyy' $}</small>
+                </div>
+            </a>
+        </div>
+    </div>
     <section class="korde-article-content korde-article-content-small p-20-0">
         <div class="row" ng-if="!articles.length">
             <small>Uh oh! Her var det tomt:(</small>
