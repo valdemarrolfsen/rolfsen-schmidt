@@ -1,3 +1,38 @@
+<div class="bg-clouds">
+    <div class="row row-center row-center-v h-full fs-20 hide-mobile">
+        <div class="w-1000">
+            <h1>{$ article.title $}</h1>
+        </div>
+        <div class="down-icon w-100-p">
+            <a smooth-scroll href="#article">
+                <h3 class="t-center"><span class="fa fa-angle-down" aria-hidden="true"></span></h3>
+            </a>
+        </div>
+    </div>
+    <div id="article" class="row row-center p-l-40-0 p-top fs-16">
+        <div class="w-1000">
+            <div class="w-100-p h-400 bg-image"
+                 style="background-image: url('{$ article.thumbnail_image_url $}')"></div>
+        </div>
+    </div>
+    <div class="row row-center p-l-40-20 fs-14">
+        <div class="w-800">
+            <h3 class="on-mobile">{$ article.title $}</h3>
+            <small>Publisert: {$ article.created_at | date:'dd MMM yyyy' $}</small><br>
+            <small>Skrevet av: {$ article.author_name $}</small><br>
+            <div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="false"
+                 data-share="true"></div>
+            <p class="big" ng-bind-html="article.body_text">{$ article.body_text $}</p>
+            <div ng-class="{'c-m-6': !element.width_type, 'c-m-12': element.width_type}"
+                 ng-repeat="element in article.elements">
+                <div class="fs-14" ng-if="element.text" ng-bind-html="element.text">{$ element.text $}</div>
+                <div ng-if="element.image_url"><img class="w-fill" ng-src="{$ element.image_url $}"
+                                                    alt="Artikkelbilde"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--
 <div class="article">
     <section class="korde-cover-image" ng-style="{'background-image':'url({$ article.thumbnail_image_url $})'}">
         <div class="cover korde-center t-white">
