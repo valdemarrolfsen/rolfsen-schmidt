@@ -75,14 +75,14 @@
 <nav ng-controller="navController" class="nav-lg nav-center nav-center-v nav-clouds">
     <div class="nav-logo"></div>
     <div tabindex="0" class="list-container">
-        <span class="fa fa-bars fs-22"></span>
-        <ul class="fs-14">
-            <li ng-class="{'active': checkSelected('/')}"><a href="#/">Hjem</a></li>
-            <li ng-class="{'active': checkSelected('/case_studies')}"><a href="#/case_studies">Arbeid</a></li>
-            <li ng-class="{'active': checkSelected('/blog')}"><a href="#/blog">Blogg</a></li>
-            <li ng-class="{'active': checkSelected('/contact')}"><a href="#/contact">Kontakt</a></li>
-        </ul>
+        <span ng-click="toggleNav()" class="fa fa-bars fs-22"></span>
     </div>
+    <ul class="fs-14" ng-class="{'open': showNav}">
+        <li ng-class="{'active': checkSelected('/')}"><a ng-click="toggleNav()" href="#/">Hjem</a></li>
+        <li ng-class="{'active': checkSelected('/case_studies')}"><a ng-click="toggleNav()" href="#/case_studies">Arbeid</a></li>
+        <li ng-class="{'active': checkSelected('/blog')}"><a ng-click="toggleNav()" href="#/blog">Blogg</a></li>
+        <li ng-class="{'active': checkSelected('/contact')}"><a ng-click="toggleNav()" href="#/contact">Kontakt</a></li>
+    </ul>
 </nav>
 
 <ng-view autoscroll="true"></ng-view>

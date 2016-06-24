@@ -135,7 +135,8 @@
     .nav-sm ul, .nav-md ul, .nav-lg ul {
       display: none;
       opacity: 0;
-      position: fixed;
+      position: absolute;
+      top: 50px;
       right: 0;
       width: 100%;
       background: #444; }
@@ -154,9 +155,9 @@
       .nav-sm .list-container span, .nav-md .list-container span, .nav-lg .list-container span {
         display: block;
         text-align: right; }
-      .nav-sm .list-container ul.open, .nav-md .list-container ul.open, .nav-lg .list-container ul.open {
-        display: block;
-        opacity: 1; } }
+    .nav-sm ul.open, .nav-md ul.open, .nav-lg ul.open {
+      display: block;
+      opacity: 1; } }
 
 .nav-side {
   position: absolute;
